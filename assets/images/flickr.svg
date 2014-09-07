@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8054) - http://www.bohemiancoding.com/sketch -->
+    <title>flickr-light</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Flat_Social_Icons" sketch:type="MSLayerGroup" transform="translate(-46.000000, -278.000000)">
+            <g id="Group-20"></g>
+            <g id="flickr" transform="translate(47.000000, 278.000000)" sketch:type="MSShapeGroup">
+                <path d="M16.796,34.085 C26.188,34.085 33.804,26.47 33.804,17.077 C33.804,7.684 26.188,0.07 16.796,0.07 C7.402,0.07 -0.213,7.684 -0.213,17.077 C-0.213,26.47 7.402,34.085 16.796,34.085" id="Fill-188" fill="#CCD0D1"></path>
+                <path d="M25.299,17.077 C25.299,19.146 23.624,20.824 21.554,20.824 C19.482,20.824 17.806,19.146 17.806,17.077 C17.806,15.009 19.482,13.331 21.554,13.331 C23.624,13.331 25.299,15.009 25.299,17.077" id="Fill-189" fill="#2C2B2B"></path>
+                <path d="M15.784,17.077 C15.784,19.146 14.108,20.824 12.036,20.824 C9.967,20.824 8.292,19.146 8.292,17.077 C8.292,15.009 9.967,13.331 12.036,13.331 C14.108,13.331 15.784,15.009 15.784,17.077" id="Fill-190" fill="#2C2B2B"></path>
+            </g>
+        </g>
+    </g>
+</svg>

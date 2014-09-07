@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8054) - http://www.bohemiancoding.com/sketch -->
+    <title>linkedin-light</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Flat_Social_Icons" sketch:type="MSLayerGroup" transform="translate(-46.000000, -134.000000)">
+            <g id="Group-20"></g>
+            <g id="linkedin" transform="translate(47.000000, 134.000000)" sketch:type="MSShapeGroup">
+                <path d="M16.557,34.109 C25.952,34.109 33.565,26.493 33.565,17.1 C33.565,7.708 25.952,0.093 16.557,0.093 C7.164,0.093 -0.451,7.708 -0.451,17.1 C-0.451,26.493 7.164,34.109 16.557,34.109" id="Fill-193" fill="#CCD0D1"></path>
+                <path d="M25.061,24.214 L21.302,24.214 L21.302,18.724 C21.302,17.287 20.714,16.306 19.421,16.306 C18.432,16.306 17.882,16.968 17.626,17.606 C17.53,17.835 17.545,18.154 17.545,18.473 L17.545,24.214 L13.821,24.214 C13.821,24.214 13.869,14.489 13.821,13.605 L17.545,13.605 L17.545,15.27 C17.765,14.542 18.955,13.503 20.854,13.503 C23.21,13.503 25.061,15.029 25.061,18.315 L25.061,24.214 L25.061,24.214 Z M10.055,12.278 L10.031,12.278 C8.831,12.278 8.053,11.467 8.053,10.439 C8.053,9.391 8.854,8.597 10.078,8.597 C11.301,8.597 12.053,9.389 12.077,10.436 C12.077,11.464 11.301,12.278 10.055,12.278 L10.055,12.278 Z M8.482,13.605 L11.797,13.605 L11.797,24.214 L8.482,24.214 L8.482,13.605 Z" id="Fill-194" fill="#2C2B2B"></path>
+            </g>
+        </g>
+    </g>
+</svg>

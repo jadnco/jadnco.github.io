@@ -10,7 +10,7 @@ $light: #f8f8f7;
 }
 
 body.outlined * {
-  outline: 1px dashed rgba($dark, 0.3);
+  outline: 1px dashed rgba(red, 0.6);
 }
 
 // Custom vendor prefix mixin
@@ -62,6 +62,15 @@ $gut-width: 32;
 [class*="col-"] {
   display: inline;
   float: left;
+}
+
+.inner {
+  width: 1000px;
+  height: 100%;
+  padding: 60px 0;
+  display: table;
+  margin: 0 auto;
+  border-bottom: 1px solid lighten($grey, 40%);
 }
 
 .row {
@@ -133,6 +142,17 @@ footer {
   display: table;
 }
 
+#container {
+  width: 1200px;
+  margin: 100px auto;
+  background: #fff;
+}
+
+.sec-title {
+  font-size: 28px;
+  color: $grey;
+}
+
 #main-header {
   width: 100%;
   height: 450px;
@@ -141,12 +161,12 @@ footer {
   background-size: cover;
   background-position: 0 75%;
 
-  .row.upper {
-    margin-top: 40px;
+  .inner {
+    border: 0;
   }
 
   .logo {
-    color: $light;
+    color: #fff;
   }
 
   #main-nav {
@@ -157,7 +177,7 @@ footer {
 
        li {
          display: inline-block;
-         color: $light;
+         color: #fff;
          margin: 0 10px;
 
          &:first-of-type {
@@ -172,20 +192,20 @@ footer {
   }
 
   .personal {
-    margin-top: 106px;
+    margin-top: 100px;
 
     .name {
-      color: $light;
+      color: #fff;
       font-size: 28px;
     }
 
     .desc {
-      color: $light;
+      color: #fff;
       margin-top: 10px;
     }
 
     .contact-btn {
-      color: $light;
+      color: #fff;
       margin-top: 20px;
       display: inline-block;
     }
@@ -193,27 +213,108 @@ footer {
 }
 
 #what-i-do {
-  .sec-title {
-    font-size: 36px;
+  .skills {
     margin-top: 50px;
-  }
 
-  .skill {
-    .icon {
-      width: 60px;
-      height: 60px;
-      display: block;
-      background: url(../images/browser.svg);
-      background-size: 60px;
+    .skill {
+      padding: 0 10px;
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        display: block;
+        background: url(../images/browser.svg);
+        background-size: 60px;
+      }
+
+      .title {
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      .text {
+        color: $grey;
+      }
     }
 
-    .title {
-      font-weight: 600;
+    .web-design {
+
+    }
+  }
+}
+
+#portfolio {
+  .project {
+    border: 1px solid lighten($grey, 40%);
+    height: 200px;
+    margin-top: 50px;
+
+    &.featured {
+      height: 350px;
+
+      .col-5 {
+        padding-left: 50px;
+
+        @extend .v-center;
+      }
+    }
+
+    .project-title {
+      font-size: 28px;
+      color: #fff;
+    }
+
+    .project-desc {
       margin-top: 10px;
+      color: #fff;
     }
   }
+}
 
-  .web-design {
+#main-footer {
+  width: 100%;
+  background: linear-gradient(rgba(#2c2c32, 0.9),rgba(#2c2c32, 0.8)),
+              url(../images/rocks.jpg);
+  background-size: cover;
+  background-position: 0 75%;
+
+  .inner {
+    border: 0;
+  }
+
+  .crafted {
+    color: #fff;
+  }
+
+  .social-links {
+    list-style: none;
+    margin-top: 8px;
+
+    li {
+      margin: 0 5px;
+      display: inline-block;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      $links: dribbble github twitter linkedin flickr email;
+
+      @each $link in $links {
+        a.#{$link} {
+          width: 24px;
+          height: 24px;
+          display: block;
+          background: url(../images/#{$link}.svg) no-repeat;
+          background-size: 24px 24px;
+        }
+      }
+    }
 
   }
+
 }
