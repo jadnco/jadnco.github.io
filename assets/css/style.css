@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: 18px/30px "Playfair Display", serif;
+  color: #1c1b19;
+  outline: 1px dashed rgba(248, 248, 247, 0.5);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+.col-1 {
+  width: 54px;
+  margin: 0 16px; }
+
+.col-2 {
+  width: 140px;
+  margin: 0 16px; }
+
+.col-3 {
+  width: 226px;
+  margin: 0 16px; }
+
+.col-4 {
+  width: 312px;
+  margin: 0 16px; }
+
+.col-5 {
+  width: 398px;
+  margin: 0 16px; }
+
+.col-6 {
+  width: 484px;
+  margin: 0 16px; }
+
+.col-7 {
+  width: 570px;
+  margin: 0 16px; }
+
+.col-8 {
+  width: 656px;
+  margin: 0 16px; }
+
+.col-9 {
+  width: 742px;
+  margin: 0 16px; }
+
+.col-10 {
+  width: 828px;
+  margin: 0 16px; }
+
+.col-11 {
+  width: 914px;
+  margin: 0 16px; }
+
+.col-12 {
+  width: 1000px;
+  margin: 0 16px; }
+
+[class*="col-"] {
+  display: inline;
+  float: left; }
+
+.row {
+  width: 1000px;
+  height: 100%;
+  padding: 0 50px;
+  position: relative;
+  margin: 0 auto; }
+  .row [class*="col-"]:first-child {
+    margin-left: 0; }
+  .row [class*="col-"]:last-child {
+    margin-right: 0; }
+  .row .right {
+    float: right;
+    right: 0; }
+  .row .left {
+    float: left;
+    left: 0; }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  background: #f8f8f7; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+.clearfix:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden; }
+
+.v-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%) ;
+  -moz-transform: translateY(-50%) ;
+  -o-transform: translateY(-50%) ;
+  transform: translateY(-50%) ; }
+
+.h-center {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%) ;
+  -moz-transform: translateX(-50%) ;
+  -o-transform: translateX(-50%) ;
+  transform: translateX(-50%) ; }
+
+::selection {
+  background: #f8f8f7;
+  color: #1c1b19; }
+
+#main-header {
+  width: 100%;
+  height: 460px;
+  background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/rocks.jpg);
+  background-size: cover;
+  background-position: 0 75%; }
+  #main-header #main-nav {
+    display: inline-block; }

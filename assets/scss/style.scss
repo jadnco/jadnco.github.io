@@ -1,0 +1,131 @@
+// Common colours
+$dark: #1c1b19;
+$grey: #878c94;
+$light: #f8f8f7;
+
+// Custom vendor prefix mixin
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+// Use translation to center vertically or horizontally
+@mixin center($XorY, $position, $transforms: "") {
+    position: #{$position};
+
+    @if $XorY == X {
+        left: 50%;
+    } @else {
+        top: 50%;
+    }
+
+    // Apply translation using the custom prefix mixin
+    @include prefix("transform", "translate#{$XorY}(-50%) #{$transforms}");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: 18px/30px "Playfair Display", serif;
+  color: $dark;
+  outline: 1px dashed rgba($light, 0.5);
+
+  @include prefix("box-sizing", "border-box");
+
+  // Make the text a little more legible
+  @include prefix("font-smoothing", "antialiased");
+}
+
+$columns: 12;
+$col-width: 54;
+$gut-width: 32;
+
+@for $i from 1 through $columns {
+  .col-#{$i} {
+    width: #{$i * $col-width + $gut-width * ($i - 1)}px;
+    margin: 0 #{$gut-width/2}px;
+  }
+}
+
+[class*="col-"] {
+  display: inline;
+  float: left;
+}
+
+.row {
+  width: 1000px;
+  height: 100%;
+  padding: 0 50px;
+  position: relative;
+  margin: 0 auto;
+
+  [class*="col-"]:first-child {
+    margin-left: 0;
+  }
+
+  [class*="col-"]:last-child {
+    margin-right: 0;
+  }
+
+  .right {
+    float: right;
+    right: 0;
+  }
+
+  .left  {
+    float: left;
+    left: 0;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: $light;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+  visibility: hidden;
+}
+
+.v-center {
+    @include center("Y", "relative")
+}
+
+.h-center {
+    @include center("X", "relative")
+}
+
+::selection {
+  background: $light;
+  color: $dark;
+}
+
+#main-header {
+  width: 100%;
+  height: 460px;
+  background: linear-gradient(rgba(#2c2c32, 0.9),rgba(#2c2c32, 0.8)),
+              url(../images/rocks.jpg);
+  background-size: cover;
+  background-position: 0 75%;
+
+  #main-nav {
+    display: inline-block;
+  }
+}
