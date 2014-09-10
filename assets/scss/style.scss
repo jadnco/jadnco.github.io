@@ -108,12 +108,13 @@ $gut-width: 32;
   }
 }
 
-html,
-body {
+html {
   width: 100%;
+  height: 100%;
 }
 
 body {
+  width: 100%;
   background: $light;
   padding: 152px 0;
 }
@@ -201,6 +202,8 @@ section {
   width: 1200px;
   margin: 0 auto;
   background: #fff;
+
+  @include prefix("animation", "c-fade-in 1.25s");
 }
 
 .sec-title {
@@ -499,6 +502,10 @@ section {
     }
   }
 
+  .sec-title {
+    text-align: center;
+  }
+
   #main-header {
     height: 480px;
 
@@ -519,11 +526,14 @@ section {
 
   #what-i-do {
     .skill {
+      text-align: center;
+
       .icon {
         width: 72px !important;
         height: 72px !important;
         float: none !important;
         margin-bottom: 20px;
+        margin-right: 0 !important;
       }
     }
 
@@ -554,23 +564,13 @@ section {
     width: 100%;
   }
 
-  .inner,
-  .row {
-    width: 90%;
+  .inner {
+    width: 88%;
+    padding: 60px 0;
   }
 
-  #main-header {
-    height: 380px !important;
-
-    .upper {
-      display: none;
-    }
-
-    .personal {
-      margin-top: 0;
-
-      @include center("Y", "relative");
-    }
+  .row {
+    width: 100%;
   }
 
   $columns: 12;
@@ -580,44 +580,152 @@ section {
       width: 100%;
     }
   }
+
+  .sec-title {
+    text-align: center;
+  }
+
+  #main-header {
+    height: 380px !important;
+
+    .row {
+      height: 100%;
+      display: block;
+    }
+
+    .inner {
+      padding-top: 60px;
+    }
+
+    .upper {
+      display: none;
+    }
+
+    .personal {
+      margin-top: 0;
+      display: block;
+
+      @include center("Y", "relative");
+    }
+  }
+
+  #what-i-do {
+    .skills {
+      margin-top: 60px;
+
+      .skill {
+        margin: 0;
+        text-align: center;
+
+        &.development {
+          margin-top: 50px;
+        }
+
+        .icon {
+          margin-bottom: 8px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  #portfolio {
+    .project.featured {
+      height: 200px;
+      margin-bottom: 20px;
+
+      .info {
+        display: none;
+      }
+    }
+
+    .project:not(.featured) {
+      margin: 20px 0;
+    }
+  }
+
+  #main-footer {
+    .crafted {
+      display: inline-block;
+      float: none;
+      margin: 0 auto;
+
+      @include center("X", "relative");
+    }
+
+    .social-links {
+      width: 100%;
+      margin-top: 30px;
+      text-align: center;
+
+      li {
+        float: none;
+        margin: 0 6px;
+      }
+    }
+  }
 }
 
 @-webkit-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @-moz-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @-o-keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes c-fade-in {
   from {
     opacity: 0;
+    @include prefix("transform", "translateY(100px)");
   }
-
   to {
     opacity: 1;
+    @include prefix("transform", "translateY(0px)");
+  }
+}
+
+@-moz-keyframes c-fade-in {
+  from {
+    opacity: 0;
+    @include prefix("transform", "translateY(100px)");
+  }
+  to {
+    opacity: 1;
+    @include prefix("transform", "translateY(0px)");
+  }
+}
+
+@-o-keyframes c-fade-in {
+  from {
+    opacity: 0;
+    @include prefix("transform", "translateY(100px)");
+  }
+  to {
+    opacity: 1;
+    @include prefix("transform", "translateY(0px)");
+  }
+}
+
+@keyframes c-fade-in {
+  from {
+    opacity: 0;
+    @include prefix("transform", "translateY(100px)");
+  }
+  to {
+    opacity: 1;
+    @include prefix("transform", "translateY(0px)");
   }
 }
