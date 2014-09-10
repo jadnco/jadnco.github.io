@@ -172,11 +172,11 @@ a {
 }
 
 .v-center {
-    @include center("Y", "relative")
+    @include center("Y", "relative");
 }
 
 .h-center {
-    @include center("X", "relative")
+    @include center("X", "relative");
 }
 
 header,
@@ -274,8 +274,6 @@ section {
     margin-top: 76px;
 
     .skill {
-      padding: 0 10px;
-
       .icon {
         width: 90px;
         height: 90px;
@@ -312,13 +310,14 @@ section {
 #portfolio {
   .project {
     border: 1px solid lighten($grey, 40%);
+    background: lighten($grey, 40%);
     height: 200px;
     margin-top: 76px;
 
     &.featured {
       height: 350px;
 
-      .col-5 {
+      .info {
         padding-left: 50px;
 
         @extend .v-center;
@@ -442,13 +441,144 @@ section {
         a.#{$link} {
           width: 24px;
           height: 24px;
-          display: block;
+          display: inline-block;
           background: url(../images/#{$link}.svg) no-repeat;
           background-size: 24px 24px;
         }
       }
     }
 
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  #container {
+    width: 900px;
+  }
+
+  .inner,
+  .row {
+    width: 800px;
+  }
+
+  $columns: 12;
+  $col-width: 48;
+  $gut-width: 20;
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      width: #{$i * $col-width + $gut-width * ($i - 1)}px;
+      margin: 0 #{$gut-width/2}px;
+    }
+  }
+}
+
+@media screen and (max-width: 940px) {
+  body {
+    padding: 100px 0;
+  }
+
+  #container {
+    width: 700px;
+  }
+
+  .inner,
+  .row {
+    width: 620px;
+    position: relative;
+  }
+
+  $columns: 12;
+  $col-width: 35;
+  $gut-width: 18;
+
+  @for $i from 1 through $columns {
+    .col-#{$i}#{if($i == 6, ", .md-col-6", "")}#{if($i == 7, ", .md-col-7", "")} {
+      width: #{$i * $col-width + $gut-width * ($i - 1)}px;
+      margin: 0 #{$gut-width/2}px;
+    }
+  }
+
+  #main-header {
+    height: 480px;
+
+    .inner {
+      padding-top: 40px;
+    }
+  }
+
+  .md-col-6 {
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(2n-1) {
+      margin-left: 0;
+    }
+  }
+
+  #what-i-do {
+    .skill {
+      .icon {
+        width: 72px !important;
+        height: 72px !important;
+        float: none !important;
+        margin-bottom: 20px;
+      }
+    }
+
+    .design {
+      .icon {
+        background-size: 72px !important;
+      }
+    }
+
+    .development {
+      .icon {
+        background-size: 72px !important;
+      }
+    }
+  }
+
+  #portfolio .featured .info {
+    padding-left: 40px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  #container {
+    width: 100%;
+  }
+
+  .inner,
+  .row {
+    width: 90%;
+  }
+
+  #main-header {
+    height: 380px !important;
+
+    .upper {
+      display: none;
+    }
+
+    .personal {
+      margin-top: 0;
+
+      @include center("Y", "relative");
+    }
+  }
+
+  $columns: 12;
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      width: 100%;
+    }
   }
 }
 

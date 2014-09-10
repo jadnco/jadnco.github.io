@@ -195,7 +195,7 @@ a.d-chevron:after {
   visibility: hidden;
 }
 
-.v-center, #portfolio .project.featured .col-5 {
+.v-center, #portfolio .project.featured .info {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%) ;
@@ -298,9 +298,6 @@ section ::selection {
 #what-i-do .skills {
   margin-top: 76px;
 }
-#what-i-do .skills .skill {
-  padding: 0 10px;
-}
 #what-i-do .skills .skill .icon {
   width: 90px;
   height: 90px;
@@ -325,13 +322,14 @@ section ::selection {
 
 #portfolio .project {
   border: 1px solid #f3f3f4;
+  background: #f3f3f4;
   height: 200px;
   margin-top: 76px;
 }
 #portfolio .project.featured {
   height: 350px;
 }
-#portfolio .project.featured .col-5 {
+#portfolio .project.featured .info {
   padding-left: 50px;
 }
 #portfolio .project .project-title {
@@ -427,46 +425,301 @@ section ::selection {
 #main-footer .social-links li a.dribbble {
   width: 24px;
   height: 24px;
-  display: block;
+  display: inline-block;
   background: url(../images/dribbble.svg) no-repeat;
   background-size: 24px 24px;
 }
 #main-footer .social-links li a.github {
   width: 24px;
   height: 24px;
-  display: block;
+  display: inline-block;
   background: url(../images/github.svg) no-repeat;
   background-size: 24px 24px;
 }
 #main-footer .social-links li a.twitter {
   width: 24px;
   height: 24px;
-  display: block;
+  display: inline-block;
   background: url(../images/twitter.svg) no-repeat;
   background-size: 24px 24px;
 }
 #main-footer .social-links li a.linkedin {
   width: 24px;
   height: 24px;
-  display: block;
+  display: inline-block;
   background: url(../images/linkedin.svg) no-repeat;
   background-size: 24px 24px;
 }
 #main-footer .social-links li a.flickr {
   width: 24px;
   height: 24px;
-  display: block;
+  display: inline-block;
   background: url(../images/flickr.svg) no-repeat;
   background-size: 24px 24px;
 }
 #main-footer .social-links li a.email {
   width: 24px;
   height: 24px;
-  display: block;
+  display: inline-block;
   background: url(../images/email.svg) no-repeat;
   background-size: 24px 24px;
 }
 
+@media screen and (max-width: 1240px) {
+  #container {
+    width: 900px;
+  }
+
+  .inner,
+  .row {
+    width: 800px;
+  }
+
+  .col-1 {
+    width: 48px;
+    margin: 0 10px;
+  }
+
+  .col-2 {
+    width: 116px;
+    margin: 0 10px;
+  }
+
+  .col-3 {
+    width: 184px;
+    margin: 0 10px;
+  }
+
+  .col-4 {
+    width: 252px;
+    margin: 0 10px;
+  }
+
+  .col-5 {
+    width: 320px;
+    margin: 0 10px;
+  }
+
+  .col-6 {
+    width: 388px;
+    margin: 0 10px;
+  }
+
+  .col-7 {
+    width: 456px;
+    margin: 0 10px;
+  }
+
+  .col-8 {
+    width: 524px;
+    margin: 0 10px;
+  }
+
+  .col-9 {
+    width: 592px;
+    margin: 0 10px;
+  }
+
+  .col-10 {
+    width: 660px;
+    margin: 0 10px;
+  }
+
+  .col-11 {
+    width: 728px;
+    margin: 0 10px;
+  }
+
+  .col-12 {
+    width: 796px;
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 940px) {
+  body {
+    padding: 100px 0;
+  }
+
+  #container {
+    width: 700px;
+  }
+
+  .inner,
+  .row {
+    width: 620px;
+    position: relative;
+  }
+
+  .col-1 {
+    width: 35px;
+    margin: 0 9px;
+  }
+
+  .col-2 {
+    width: 88px;
+    margin: 0 9px;
+  }
+
+  .col-3 {
+    width: 141px;
+    margin: 0 9px;
+  }
+
+  .col-4 {
+    width: 194px;
+    margin: 0 9px;
+  }
+
+  .col-5 {
+    width: 247px;
+    margin: 0 9px;
+  }
+
+  .col-6, .md-col-6 {
+    width: 300px;
+    margin: 0 9px;
+  }
+
+  .col-7, .md-col-7 {
+    width: 353px;
+    margin: 0 9px;
+  }
+
+  .col-8 {
+    width: 406px;
+    margin: 0 9px;
+  }
+
+  .col-9 {
+    width: 459px;
+    margin: 0 9px;
+  }
+
+  .col-10 {
+    width: 512px;
+    margin: 0 9px;
+  }
+
+  .col-11 {
+    width: 565px;
+    margin: 0 9px;
+  }
+
+  .col-12 {
+    width: 618px;
+    margin: 0 9px;
+  }
+
+  #main-header {
+    height: 480px;
+  }
+  #main-header .inner {
+    padding-top: 40px;
+  }
+
+  .md-col-6:nth-of-type(2n) {
+    margin-right: 0;
+  }
+  .md-col-6:nth-of-type(2n-1) {
+    margin-left: 0;
+  }
+
+  #what-i-do .skill .icon {
+    width: 72px !important;
+    height: 72px !important;
+    float: none !important;
+    margin-bottom: 20px;
+  }
+  #what-i-do .design .icon {
+    background-size: 72px !important;
+  }
+  #what-i-do .development .icon {
+    background-size: 72px !important;
+  }
+
+  #portfolio .featured .info {
+    padding-left: 40px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  #container {
+    width: 100%;
+  }
+
+  .inner,
+  .row {
+    width: 90%;
+  }
+
+  #main-header {
+    height: 380px !important;
+  }
+  #main-header .upper {
+    display: none;
+  }
+  #main-header .personal {
+    margin-top: 0;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%) ;
+    -moz-transform: translateY(-50%) ;
+    -ms-transform: translateY(-50%) ;
+    -o-transform: translateY(-50%) ;
+    transform: translateY(-50%) ;
+  }
+
+  .col-1 {
+    width: 100%;
+  }
+
+  .col-2 {
+    width: 100%;
+  }
+
+  .col-3 {
+    width: 100%;
+  }
+
+  .col-4 {
+    width: 100%;
+  }
+
+  .col-5 {
+    width: 100%;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+
+  .col-7 {
+    width: 100%;
+  }
+
+  .col-8 {
+    width: 100%;
+  }
+
+  .col-9 {
+    width: 100%;
+  }
+
+  .col-10 {
+    width: 100%;
+  }
+
+  .col-11 {
+    width: 100%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
 @-webkit-keyframes fade-in {
   from {
     opacity: 0;
