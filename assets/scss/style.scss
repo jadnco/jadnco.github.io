@@ -209,6 +209,7 @@ section {
 .sec-title {
   font-size: 28px;
   color: $dark;
+  margin-bottom: 72px;
 }
 
 #main-header {
@@ -274,8 +275,6 @@ section {
 
 #what-i-do {
   .skills {
-    margin-top: 76px;
-
     .skill {
       .icon {
         width: 90px;
@@ -319,6 +318,7 @@ section {
 
     &.featured {
       height: 350px;
+      margin-top: 0;
 
       .info {
         padding-left: 50px;
@@ -345,7 +345,23 @@ section {
   }
 }
 
-#case-study {
+#testimonials {
+  .testm {
+    q {
+      font-size: 28px;
+      line-height: 42px;
+      display: block;
+    }
+
+    .author {
+      color: $grey;
+      display: block;
+      margin-top: 38px;
+    }
+  }
+}
+
+.project {
   h1 {
     font-size: 28px;
     color: $dark;
@@ -353,18 +369,6 @@ section {
 
     &:first-child {
       margin-bottom: 38px;
-    }
-  }
-
-  p {
-    margin: 38px 0;
-
-    &:first-of-type {
-      margin-top: 0;
-    }
-
-    &:last-of-type {
-      margin-bottom: 0;
     }
   }
 
@@ -392,6 +396,25 @@ section {
     padding: 5px 10px 6px 10px;
     background: lighten($grey, 40%);
     font-family: monospace;
+  }
+
+  #result {
+    
+  }
+
+  #techs {
+    .thrw:not(:last-of-type) {
+      margin-bottom: 38px;
+    }
+
+    .tech {
+      color: $grey;
+
+      strong {
+        font-weight: 600;
+        color: $dark;
+      }
+    }
   }
 }
 

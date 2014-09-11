@@ -245,6 +245,7 @@ section ::selection {
 .sec-title {
   font-size: 28px;
   color: #2e2e33;
+  margin-bottom: 72px;
 }
 
 #main-header {
@@ -301,9 +302,6 @@ section ::selection {
   position: absolute;
 }
 
-#what-i-do .skills {
-  margin-top: 76px;
-}
 #what-i-do .skills .skill .icon {
   width: 90px;
   height: 90px;
@@ -334,6 +332,7 @@ section ::selection {
 }
 #portfolio .project.featured {
   height: 350px;
+  margin-top: 0;
 }
 #portfolio .project.featured .info {
   padding-left: 50px;
@@ -352,43 +351,55 @@ section ::selection {
   margin-top: 20px;
 }
 
-#case-study h1 {
+#testimonials .testm q {
+  font-size: 28px;
+  line-height: 42px;
+  display: block;
+}
+#testimonials .testm .author {
+  color: #878c94;
+  display: block;
+  margin-top: 38px;
+}
+
+.project h1 {
   font-size: 28px;
   color: #2e2e33;
   clear: both;
 }
-#case-study h1:first-child {
+.project h1:first-child {
   margin-bottom: 38px;
 }
-#case-study p {
-  margin: 38px 0;
-}
-#case-study p:first-of-type {
-  margin-top: 0;
-}
-#case-study p:last-of-type {
-  margin-bottom: 0;
-}
-#case-study img {
+.project img {
   margin: 0 0 18px 0;
 }
-#case-study img.left {
+.project img.left {
   margin-right: 38px;
   float: left;
 }
-#case-study img.right {
+.project img.right {
   margin-left: 38px;
   float: right;
 }
-#case-study img.col-12 {
+.project img.col-12 {
   display: block;
   margin: 0 0 38px 0;
 }
-#case-study code {
+.project code {
   display: inline-block;
   padding: 5px 10px 6px 10px;
   background: #f3f3f4;
   font-family: monospace;
+}
+.project #techs .thrw:not(:last-of-type) {
+  margin-bottom: 38px;
+}
+.project #techs .tech {
+  color: #878c94;
+}
+.project #techs .tech strong {
+  font-weight: 600;
+  color: #2e2e33;
 }
 
 #main-footer {
