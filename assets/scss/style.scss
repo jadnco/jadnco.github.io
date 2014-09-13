@@ -198,6 +198,11 @@ section {
   }
 }
 
+strong {
+  font-weight: 600;
+  color: $dark;
+}
+
 #container {
   width: 1200px;
   margin: 0 auto;
@@ -361,7 +366,39 @@ section {
   }
 }
 
+#social {
+  .s-link {
+    height: 38px;
+    text-align: center;
+
+    a {
+      width: 38px;
+      height: 38px;
+      display: block;
+      margin: 0 auto;
+
+      @include prefix("transition", "opacity 0.25s ease-in-out");
+
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+
+    $links: dribbble github twitter linkedin flickr email;
+
+    @each $link in $links {
+      a.#{$link} {
+        background: url(../images/#{$link}.svg) no-repeat;
+        background-size: 38px 38px;
+      }
+    }
+  }
+}
+
 .project {
+  p {
+    color: $grey;
+  }
   h1 {
     font-size: 28px;
     color: $dark;
@@ -398,8 +435,14 @@ section {
     font-family: monospace;
   }
 
-  #result {
-    
+  #proposal {
+    .roli {
+      margin-bottom: 38px;
+
+      .col-4 {
+        color: $grey;
+      }
+    }
   }
 
   #techs {
@@ -409,10 +452,15 @@ section {
 
     .tech {
       color: $grey;
+    }
 
-      strong {
-        font-weight: 600;
+    .check-out {
+      color: $grey;
+
+      a {
         color: $dark;
+        font-weight: 600;
+        text-decoration: underline;
       }
     }
   }
@@ -429,7 +477,8 @@ section {
     border: 0;
   }
 
-  .crafted {
+  .crafted,
+  .copyright {
     color: #fff;
     line-height: 35px;
 
@@ -442,38 +491,6 @@ section {
       margin-top: 7px;
       margin-right: 10px;
     }
-  }
-
-  .social-links {
-    list-style: none;
-    margin-top: 6px;
-
-    li {
-      margin: 0 10px;
-      display: inline-block;
-      float: left;
-
-      &:first-of-type {
-        margin-left: 0;
-      }
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-
-      $links: dribbble github twitter linkedin flickr email;
-
-      @each $link in $links {
-        a.#{$link} {
-          width: 24px;
-          height: 24px;
-          display: inline-block;
-          background: url(../images/#{$link}.svg) no-repeat;
-          background-size: 24px 24px;
-        }
-      }
-    }
-
   }
 }
 

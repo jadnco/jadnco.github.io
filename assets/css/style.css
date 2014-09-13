@@ -231,6 +231,11 @@ section ::selection {
   color: #f8f8f7;
 }
 
+strong {
+  font-weight: 600;
+  color: #2e2e33;
+}
+
 #container {
   width: 1200px;
   margin: 0 auto;
@@ -362,6 +367,52 @@ section ::selection {
   margin-top: 38px;
 }
 
+#social .s-link {
+  height: 38px;
+  text-align: center;
+}
+#social .s-link a {
+  width: 38px;
+  height: 38px;
+  display: block;
+  margin: 0 auto;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+#social .s-link a:hover {
+  opacity: 0.3;
+}
+#social .s-link a.dribbble {
+  background: url(../images/dribbble.svg) no-repeat;
+  background-size: 38px 38px;
+}
+#social .s-link a.github {
+  background: url(../images/github.svg) no-repeat;
+  background-size: 38px 38px;
+}
+#social .s-link a.twitter {
+  background: url(../images/twitter.svg) no-repeat;
+  background-size: 38px 38px;
+}
+#social .s-link a.linkedin {
+  background: url(../images/linkedin.svg) no-repeat;
+  background-size: 38px 38px;
+}
+#social .s-link a.flickr {
+  background: url(../images/flickr.svg) no-repeat;
+  background-size: 38px 38px;
+}
+#social .s-link a.email {
+  background: url(../images/email.svg) no-repeat;
+  background-size: 38px 38px;
+}
+
+.project p {
+  color: #878c94;
+}
 .project h1 {
   font-size: 28px;
   color: #2e2e33;
@@ -391,15 +442,25 @@ section ::selection {
   background: #f3f3f4;
   font-family: monospace;
 }
+.project #proposal .roli {
+  margin-bottom: 38px;
+}
+.project #proposal .roli .col-4 {
+  color: #878c94;
+}
 .project #techs .thrw:not(:last-of-type) {
   margin-bottom: 38px;
 }
 .project #techs .tech {
   color: #878c94;
 }
-.project #techs .tech strong {
-  font-weight: 600;
+.project #techs .check-out {
+  color: #878c94;
+}
+.project #techs .check-out a {
   color: #2e2e33;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 #main-footer {
@@ -411,11 +472,13 @@ section ::selection {
 #main-footer .inner {
   border: 0;
 }
-#main-footer .crafted {
+#main-footer .crafted,
+#main-footer .copyright {
   color: #fff;
   line-height: 35px;
 }
-#main-footer .crafted .maple {
+#main-footer .crafted .maple,
+#main-footer .copyright .maple {
   width: 20px;
   height: 20px;
   float: left;
@@ -423,63 +486,6 @@ section ::selection {
   background-size: 20px;
   margin-top: 7px;
   margin-right: 10px;
-}
-#main-footer .social-links {
-  list-style: none;
-  margin-top: 6px;
-}
-#main-footer .social-links li {
-  margin: 0 10px;
-  display: inline-block;
-  float: left;
-}
-#main-footer .social-links li:first-of-type {
-  margin-left: 0;
-}
-#main-footer .social-links li:last-of-type {
-  margin-right: 0;
-}
-#main-footer .social-links li a.dribbble {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background: url(../images/dribbble.svg) no-repeat;
-  background-size: 24px 24px;
-}
-#main-footer .social-links li a.github {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background: url(../images/github.svg) no-repeat;
-  background-size: 24px 24px;
-}
-#main-footer .social-links li a.twitter {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background: url(../images/twitter.svg) no-repeat;
-  background-size: 24px 24px;
-}
-#main-footer .social-links li a.linkedin {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background: url(../images/linkedin.svg) no-repeat;
-  background-size: 24px 24px;
-}
-#main-footer .social-links li a.flickr {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background: url(../images/flickr.svg) no-repeat;
-  background-size: 24px 24px;
-}
-#main-footer .social-links li a.email {
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background: url(../images/email.svg) no-repeat;
-  background-size: 24px 24px;
 }
 
 @media screen and (max-width: 1240px) {
