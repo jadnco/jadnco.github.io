@@ -3,6 +3,8 @@ $dark: #2E2E33;
 $grey: #878c94;
 $light: #f8f8f7;
 
+$projects: xv;
+
 #outline {
   position: fixed;
   bottom: 50px;
@@ -122,6 +124,9 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+
+  // Remove black box on iOS
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 
   &[class*="-chevron"] {
     display: inline-block !important;
@@ -263,19 +268,6 @@ strong {
       margin-top: 20px;
     }
   }
-
-  &.project-hero {
-    overflow: hidden;
-
-    .main-view {
-      height: 340px;
-      margin-top: 55px;
-      border-bottom: 1px solid lighten($grey, 40%);
-      box-shadow: 0 0 8px rgba($dark, 0.5);
-      background: $light;
-      position: absolute;
-    }
-  }
 }
 
 #what-i-do {
@@ -316,10 +308,37 @@ strong {
 
 #portfolio {
   .project {
-    border: 1px solid lighten($grey, 40%);
-    background: lighten($grey, 40%);
+    //border: 1px solid lighten($grey, 40%);
+    // background: lighten($grey, 40%);
     height: 200px;
-    margin-top: 76px;
+    // margin-top: 76px;
+
+    .hover {
+      width: 100%;
+      height: 100%;
+      float: left;
+      background: $dark;
+      opacity: 0;
+      padding: 30px;
+
+      @include prefix("transition", "opacity 0.25s ease-in-out");
+
+      * {
+        color: $light;
+      }
+
+      .learn-btn {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+      }
+    }
+
+    &:hover {
+      .hover {
+        opacity: 1;
+      }
+    }
 
     &.featured {
       height: 350px;
@@ -346,6 +365,14 @@ strong {
       color: #fff;
       display: block;
       margin-top: 20px;
+    }
+
+    @each $project in $projects {
+      &.#{$project} {
+        background: url(../images/#{$project}-thumb.png) no-repeat;
+        background-size: 100%;
+        background-position: center;
+      }
     }
   }
 }
@@ -396,9 +423,34 @@ strong {
 }
 
 .project {
+  @each $project in $projects {
+    &.#{$project} {
+      .main-view {
+        background: url(../images/#{$project}-main.png) no-repeat;
+        background-size: 100%;
+        background-position: center;
+      }
+    }
+  }
+
+  #main-header {
+    &.project-hero {
+      overflow: hidden;
+
+      .main-view {
+        height: 394px;
+        margin-top: 0px;
+        box-shadow: 0 0 16px rgba(#000, 0.2);
+        border-bottom: 1px solid lighten($grey, 40%);
+        position: absolute;
+      }
+    }
+  }
+
   p {
     color: $grey;
   }
+
   h1 {
     font-size: 28px;
     color: $dark;
@@ -456,6 +508,7 @@ strong {
 
     .check-out {
       color: $grey;
+      margin-top: 38px;
 
       a {
         color: $dark;
@@ -472,6 +525,11 @@ strong {
               url(../images/rocks.jpg);
   background-size: cover;
   background-position: 0 75%;
+
+  ::selection {
+    background: $light;
+    color: $dark;
+  }
 
   .inner {
     border: 0;
@@ -494,6 +552,28 @@ strong {
   }
 }
 
+// Retina assets
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  @each $project in $projects {
+    body.home {
+      #portfolio {
+        .project.#{$project} {
+          background: url(../images/#{$project}-thumb@2x.png) center !important;
+          background-size: 100% !important;
+        }
+      }
+    }
+
+    body.project {
+      #main-header {
+        .main-view {
+          background: url(../images/#{$project}-main@2x.png) !important;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1240px) {
   #container {
     width: 900px;
@@ -512,6 +592,28 @@ strong {
     .col-#{$i} {
       width: #{$i * $col-width + $gut-width * ($i - 1)}px;
       margin: 0 #{$gut-width/2}px;
+    }
+  }
+
+  #main-header {
+    height: 422px;
+
+    .project-info {
+      margin-top: 72px;
+    }
+  }
+
+  body.home {
+    .personal {
+      margin-top: 60px !important;
+    }
+  }
+
+  body.project{
+    #main-header {
+      .main-view {
+        height: 316px !important;
+      }
     }
   }
 }
@@ -593,6 +695,59 @@ strong {
   #portfolio .featured .info {
     padding-left: 40px !important;
   }
+
+  #portfolio .project {
+    .hover {
+      position: relative;
+      padding: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden;
+
+      .desc {
+        display: none;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0 !important;
+        bottom: 0 !important;
+        opacity: 0;
+        margin: 0;
+      }
+    }
+
+    &:nth-of-type(-n+2) {
+      margin-bottom: 38px;
+    }
+  }
+
+  body.home {
+    #main-header {
+      .personal {
+        margin-top: 100px !important;
+      }
+    }
+  }
+
+  body.project {
+    #main-header {
+      .project-info {
+        margin-top: 120px;
+      }
+
+      .main-view {
+        display: none;
+      }
+    }
+
+    #techs {
+      .tech:not(:last-of-type) {
+        margin-bottom: 38px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -618,6 +773,14 @@ strong {
   @for $i from 1 through $columns {
     .col-#{$i} {
       width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    @if $i == 2 {
+      .sm-col-2 {
+        width: 16.6% !important;
+      }
     }
   }
 
@@ -625,33 +788,83 @@ strong {
     text-align: center;
   }
 
+  body.home {
+    #main-header {
+      .inner {
+        padding-top: 70px;
+      }
+
+      .row {
+        height: 100% !important;
+        display: block;
+
+        .personal {
+          margin-top: 0 !important;
+        }
+
+        &.upper {
+          display: none;
+        }
+      }
+    }
+
+    .project .hover {
+      position: relative;
+      padding: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden;
+
+      .desc {
+        display: none;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0 !important;
+        bottom: 0 !important;
+        opacity: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  body.project {
+    #main-header {
+      .row {
+        .upper {
+          display: table;
+        }
+      }
+    }
+  }
+
   #main-header {
     height: 380px !important;
 
-    .row {
-      height: 100%;
-      display: block;
-    }
-
     .inner {
-      padding-top: 60px;
-    }
-
-    .upper {
-      display: none;
+      padding-top: 40px;
     }
 
     .personal {
-      margin-top: 0;
       display: block;
 
       @include center("Y", "relative");
+    }
+
+    .project-info {
+      margin-top: 0;
+      position: relative;
+      top: 50%;
+
+      @include prefix("transform", "translateY(-25%)");
     }
   }
 
   #what-i-do {
     .skills {
-      margin-top: 60px;
+      margin-top: 0px;
 
       .skill {
         margin: 0;
@@ -678,9 +891,42 @@ strong {
         display: none;
       }
     }
+  }
 
-    .project:not(.featured) {
-      margin: 20px 0;
+  .project {
+    #proposal {
+      .roli {
+        .col-4:first-of-type {
+          margin-bottom: 19px;
+        }
+      }
+    }
+
+    #techs {
+      .thrw {
+        margin: 0 !important;
+      }
+
+      .tech:not(:first-of-type) {
+        margin: 0 0 38px 0 !important;
+      }
+
+      .check-out {
+        color: $grey;
+        margin-top: 38px;
+      }
+    }
+  }
+
+  #social {
+    .s-link {
+      height: 28px;
+
+      a {
+        width: 28px;
+        height: 28px;
+        background-size: 28px 28px !important;
+      }
     }
   }
 
@@ -693,15 +939,12 @@ strong {
       @include center("X", "relative");
     }
 
-    .social-links {
-      width: 100%;
-      margin-top: 30px;
+    .copyright {
+      display: block;
+      float: none;
+      margin: 0 auto;
       text-align: center;
-
-      li {
-        float: none;
-        margin: 0 6px;
-      }
+      margin-top: 16px;
     }
   }
 }
