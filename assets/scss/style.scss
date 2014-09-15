@@ -3,7 +3,7 @@ $dark: #2E2E33;
 $grey: #878c94;
 $light: #f8f8f7;
 
-$projects: xv;
+$projects: xv prattle showcase;
 
 #outline {
   position: fixed;
@@ -58,7 +58,7 @@ $gut-width: 32;
 @for $i from 1 through $columns {
   .col-#{$i} {
     width: #{$i * $col-width + $gut-width * ($i - 1)}px;
-    margin: 0 #{$gut-width/2}px;
+    margin: 0 #{if($i != 12, $gut-width/2, "0")}px;
   }
 }
 
@@ -311,6 +311,7 @@ strong {
     //border: 1px solid lighten($grey, 40%);
     // background: lighten($grey, 40%);
     height: 200px;
+    position: relative;
     // margin-top: 76px;
 
     .hover {
@@ -320,6 +321,7 @@ strong {
       background: $dark;
       opacity: 0;
       padding: 30px;
+      position: relative;
 
       @include prefix("transition", "opacity 0.25s ease-in-out");
 
@@ -495,6 +497,10 @@ strong {
         color: $grey;
       }
     }
+
+    p:not(:last-of-type) {
+      margin-bottom: 38px;
+    }
   }
 
   #techs {
@@ -512,7 +518,6 @@ strong {
 
       a {
         color: $dark;
-        font-weight: 600;
         text-decoration: underline;
       }
     }

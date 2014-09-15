@@ -83,7 +83,7 @@ body.outlined * {
 
 .col-12 {
   width: 1000px;
-  margin: 0 16px;
+  margin: 0 0px;
 }
 
 [class*="col-"] {
@@ -321,6 +321,7 @@ strong {
 
 #portfolio .project {
   height: 200px;
+  position: relative;
 }
 #portfolio .project .hover {
   width: 100%;
@@ -329,6 +330,7 @@ strong {
   background: #2e2e33;
   opacity: 0;
   padding: 30px;
+  position: relative;
   -webkit-transition: opacity 0.25s ease-in-out;
   -moz-transition: opacity 0.25s ease-in-out;
   -ms-transition: opacity 0.25s ease-in-out;
@@ -368,6 +370,16 @@ strong {
 }
 #portfolio .project.xv {
   background: url(../images/xv-thumb.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#portfolio .project.prattle {
+  background: url(../images/prattle-thumb.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+#portfolio .project.showcase {
+  background: url(../images/showcase-thumb.png) no-repeat;
   background-size: 100%;
   background-position: center;
 }
@@ -431,6 +443,16 @@ strong {
   background-size: 100%;
   background-position: center;
 }
+.project.prattle .main-view {
+  background: url(../images/prattle-main.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+.project.showcase .main-view {
+  background: url(../images/showcase-main.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
 .project #main-header.project-hero {
   overflow: hidden;
 }
@@ -479,6 +501,9 @@ strong {
 .project #proposal .roli .col-4 {
   color: #878c94;
 }
+.project #proposal p:not(:last-of-type) {
+  margin-bottom: 38px;
+}
 .project #techs .thrw:not(:last-of-type) {
   margin-bottom: 38px;
 }
@@ -491,7 +516,6 @@ strong {
 }
 .project #techs .check-out a {
   color: #2e2e33;
-  font-weight: 600;
   text-decoration: underline;
 }
 
@@ -532,6 +556,24 @@ strong {
 
   body.project #main-header .main-view {
     background: url(../images/xv-main@2x.png) !important;
+  }
+
+  body.home #portfolio .project.prattle {
+    background: url(../images/prattle-thumb@2x.png) center !important;
+    background-size: 100% !important;
+  }
+
+  body.project #main-header .main-view {
+    background: url(../images/prattle-main@2x.png) !important;
+  }
+
+  body.home #portfolio .project.showcase {
+    background: url(../images/showcase-thumb@2x.png) center !important;
+    background-size: 100% !important;
+  }
+
+  body.project #main-header .main-view {
+    background: url(../images/showcase-main@2x.png) !important;
   }
 }
 @media screen and (max-width: 1240px) {
