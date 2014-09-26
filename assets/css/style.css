@@ -12,7 +12,7 @@ body.outlined * {
   margin: 0;
   padding: 0;
   font: 18px/30px "Hind", sans-serif;
-  color: #2e2e33;
+  color: #2c2c32;
   font-weight: 400;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -225,16 +225,16 @@ footer {
 }
 
 section * {
-  color: #2e2e33;
+  color: #2c2c32;
 }
 section ::selection {
-  background: #2e2e33;
+  background: #2c2c32;
   color: #f8f8f7;
 }
 
 strong {
   font-weight: 600;
-  color: #2e2e33;
+  color: #2c2c32;
 }
 
 #container {
@@ -250,20 +250,20 @@ strong {
 
 .sec-title {
   font-size: 28px;
-  color: #2e2e33;
+  color: #2c2c32;
   margin-bottom: 72px;
 }
 
 #main-header {
   width: 100%;
   height: 500px;
-  background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/rocks.jpg);
+  background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/lake2.jpg);
   background-size: cover;
   background-position: 0 75%;
 }
 #main-header ::selection {
   background: #f8f8f7;
-  color: #2e2e33;
+  color: #2c2c32;
 }
 #main-header .inner {
   border: 0;
@@ -327,7 +327,7 @@ strong {
   width: 100%;
   height: 100%;
   float: left;
-  background: #2e2e33;
+  background: #2c2c32;
   opacity: 0;
   padding: 30px;
   position: relative;
@@ -468,7 +468,7 @@ strong {
 }
 .project h1 {
   font-size: 28px;
-  color: #2e2e33;
+  color: #2c2c32;
   clear: both;
 }
 .project h1:first-child {
@@ -515,19 +515,72 @@ strong {
   margin-top: 38px;
 }
 .project #techs .check-out a {
-  color: #2e2e33;
+  color: #2c2c32;
   text-decoration: underline;
+}
+.project #photos [class*="col-"] {
+  background: #878c94;
+  display: table;
+  background-size: cover !important;
+  background-position: center center;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+.project #photos [class*="col-"]:hover {
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+}
+.project #photos [class*="col-"]:hover:before {
+  opacity: 0;
+}
+.project #photos [class*="col-"]:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#2c2c32, rgba(44, 44, 50, 0.8));
+  display: block;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.project #photos .row:first-of-type .col-7 {
+  height: 500px;
+}
+.project #photos .row:first-of-type .col-5 {
+  height: 268px;
+  margin-right: 0;
+}
+.project #photos .row:first-of-type .col-5:nth-of-type(2) {
+  height: 200px;
+  margin-bottom: 32px;
+}
+.project #photos .row:nth-of-type(2) {
+  margin-top: 32px;
+}
+.project #photos .row:nth-of-type(2) .col-8 {
+  height: 300px;
+}
+.project #photos .row:nth-of-type(2) .col-4 {
+  height: 300px;
 }
 
 #main-footer {
   width: 100%;
-  background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/rocks.jpg);
+  background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/lake2.jpg);
   background-size: cover;
   background-position: 0 75%;
 }
 #main-footer ::selection {
   background: #f8f8f7;
-  color: #2e2e33;
+  color: #2c2c32;
 }
 #main-footer .inner {
   border: 0;
