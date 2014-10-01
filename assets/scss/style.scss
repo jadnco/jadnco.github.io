@@ -73,16 +73,7 @@ $gut-width: 32;
   padding: 76px 0;
   display: table;
   margin: 0 auto;
-  opacity: 0;
   border-bottom: 1px solid lighten($grey, 40%);
-
-  &.fade-in {
-    @include prefix("animation", "fade-in 1.25s");
-  }
-
-  &.scrolled {
-    opacity: 1 !important;
-  }
 }
 
 .row {
@@ -1011,26 +1002,6 @@ strong {
       margin-top: 16px;
     }
   }
-}
-
-@-webkit-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@-moz-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@-o-keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }
 
 @-webkit-keyframes c-fade-in {
