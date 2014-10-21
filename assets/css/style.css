@@ -1021,14 +1021,14 @@ strong {
     display: table;
   }
   body.project #photos .col-7 {
-    height: 360px !important;
+    height: auto !important;
   }
   body.project #photos .col-7 img {
     width: 100%;
     height: auto;
   }
   body.project #photos .col-5 {
-    height: 360px !important;
+    height: auto !important;
     margin-right: 0;
     margin-top: 60px;
     margin-bottom: 0 !important;
@@ -1039,7 +1039,7 @@ strong {
     height: auto;
   }
   body.project #photos .col-5:nth-of-type(2) {
-    height: 360px !important;
+    height: auto !important;
   }
   body.project #photos .col-5:nth-of-type(2) img {
     margin-top: 0px;

@@ -940,7 +940,7 @@ strong {
 
     #photos {
       .col-7 {
-        height: 360px !important;
+        height: auto !important;
 
         img {
           width: 100%;
@@ -949,7 +949,7 @@ strong {
       }
 
       .col-5 {
-        height: 360px !important;
+        height: auto !important;
         margin-right: 0;
         margin-top: 60px;
         margin-bottom: 0 !important;
@@ -961,7 +961,7 @@ strong {
         }
 
         &:nth-of-type(2) {
-          height: 360px !important;
+          height: auto !important;
 
           img {
             margin-top: 0px;
