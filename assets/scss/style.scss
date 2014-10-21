@@ -3,7 +3,7 @@ $dark: #2c2c32; // #2E2E33;
 $grey: #878c94;
 $light: #f8f8f7;
 
-$projects: xv prattle showcase;
+$projects: xv prattle dreamscape; // showcase
 
 #outline {
   position: fixed;
@@ -433,7 +433,7 @@ strong {
       .main-view {
         height: 394px;
         margin-top: 0px;
-        box-shadow: 0 0 16px rgba(#000, 0.2);
+        box-shadow: -10px -1px 16px -10px rgba(#000, 0.4); // black 0.2
         border-bottom: 1px solid lighten($grey, 40%);
         position: absolute;
       }

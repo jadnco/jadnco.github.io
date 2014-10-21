@@ -367,8 +367,8 @@ strong {
   background-size: 100%;
   background-position: center;
 }
-#portfolio .project.showcase {
-  background: url(../images/showcase-thumb.png) no-repeat;
+#portfolio .project.dreamscape {
+  background: url(../images/dreamscape-thumb.png) no-repeat;
   background-size: 100%;
   background-position: center;
 }
@@ -437,8 +437,8 @@ strong {
   background-size: 100%;
   background-position: center;
 }
-.project.showcase .main-view {
-  background: url(../images/showcase-main.png) no-repeat;
+.project.dreamscape .main-view {
+  background: url(../images/dreamscape-main.png) no-repeat;
   background-size: 100%;
   background-position: center;
 }
@@ -448,7 +448,7 @@ strong {
 .project #main-header.project-hero .main-view {
   height: 394px;
   margin-top: 0px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  box-shadow: -10px -1px 16px -10px rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid #f3f3f4;
   position: absolute;
 }
@@ -607,13 +607,13 @@ strong {
     background: url(../images/prattle-main@2x.png) !important;
   }
 
-  body.home #portfolio .project.showcase {
-    background: url(../images/showcase-thumb@2x.png) center !important;
+  body.home #portfolio .project.dreamscape {
+    background: url(../images/dreamscape-thumb@2x.png) center !important;
     background-size: 100% !important;
   }
 
   body.project #main-header .main-view {
-    background: url(../images/showcase-main@2x.png) !important;
+    background: url(../images/dreamscape-main@2x.png) !important;
   }
 }
 @media screen and (max-width: 1240px) {
