@@ -71,7 +71,6 @@ $gut-width: 32;
   width: 1000px;
   height: 100%;
   padding: 76px 0;
-  display: table;
   margin: 0 auto;
   border-bottom: 1px solid lighten($grey, 40%);
 }
@@ -80,7 +79,7 @@ $gut-width: 32;
   width: 1000px;
   position: relative;
   margin: 0 auto;
-  display: table;
+  display: inline-block;
 
   [class*="col-"]:first-child {
     margin-left: 0;
@@ -180,7 +179,6 @@ header,
 section,
 footer {
   width: 100%;
-  display: table;
 }
 
 section {
@@ -258,7 +256,7 @@ strong {
 
   .personal,
   .project-info {
-    margin-top: 110px;
+    margin-top: 156px;
 
     .name {
       color: #fff;
@@ -447,6 +445,10 @@ strong {
     &.project-hero {
       overflow: hidden;
 
+      .project-info {
+        margin-top: 100px;
+      }
+
       .main-view {
         height: 394px;
         margin-top: 0px;
@@ -634,10 +636,11 @@ strong {
       }
     }
 
-    body.project {
+    body.project.#{$project} {
       #main-header {
         .main-view {
           background: url(../images/#{$project}-main@2x.png) !important;
+          background-size: 100% !important;
         }
       }
     }
@@ -665,6 +668,11 @@ strong {
     }
   }
 
+  .col-12 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   #main-header {
     height: 422px;
 
@@ -675,12 +683,16 @@ strong {
 
   body.home {
     .personal {
-      margin-top: 60px !important;
+      margin-top: 190px !important;
     }
   }
 
   body.project{
     #main-header {
+      .project-info {
+        margin-top: 68px !important;
+      }
+
       .main-view {
         height: 316px !important;
       }
@@ -710,26 +722,30 @@ strong {
       }
     }
   }
+
+  #main-footer {
+    height: 200px;
+  }
 }
 
 @media screen and (max-width: 940px) {
   body {
-    padding: 100px 0;
+    padding: 0;
   }
 
   #container {
-    width: 700px;
+    width: 100%;
   }
 
   .inner,
   .row {
-    width: 620px;
+    width: 700px;
     position: relative;
   }
 
   $columns: 12;
   $col-width: 35;
-  $gut-width: 18;
+  $gut-width: 25;
 
   @for $i from 1 through $columns {
     .col-#{$i}#{if($i == 6, ", .md-col-6", "")}#{if($i == 7, ", .md-col-7", "")} {
@@ -738,12 +754,18 @@ strong {
     }
   }
 
+  .row,
+  .col-12 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .sec-title {
     text-align: center;
   }
 
   #main-header {
-    height: 480px;
+    height: 400px;
 
     .inner {
       padding-top: 40px;
@@ -820,7 +842,7 @@ strong {
   body.home {
     #main-header {
       .personal {
-        margin-top: 100px !important;
+        margin-top: 186px !important;
       }
     }
   }
@@ -828,11 +850,12 @@ strong {
   body.project {
     #main-header {
       .project-info {
-        margin-top: 120px;
+        margin-top: 75px;
       }
 
       .main-view {
-        display: none;
+        height: 275px !important;
+        bottom: -78px !important;
       }
     }
 
@@ -867,7 +890,7 @@ strong {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body {
     padding: 0;
   }
@@ -949,10 +972,8 @@ strong {
 
   body.project {
     #main-header {
-      .row {
-        .upper {
-          display: table;
-        }
+      .main-view {
+        display: none;
       }
     }
 
@@ -1043,6 +1064,12 @@ strong {
   }
 
   .project {
+    #main-header {
+        .project-info {
+          padding-top: 40px;
+        }
+    }
+
     #proposal {
       .roli {
         .col-4:first-of-type {

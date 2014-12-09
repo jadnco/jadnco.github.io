@@ -13,10 +13,6 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://jadn.co">
 
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="">
-    <link rel="apple-touch-icon" href="" sizes="120x120">
-
     <!-- jQuery -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -30,7 +26,8 @@
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-53825411-1', 'jadn.co');
+      ga('create', 'UA-53825411-1', 'auto');
+      ga('require', 'linkid', 'linkid.js');
       ga('send', 'pageview');
     </script>
   </head>
@@ -39,17 +36,17 @@
       <header id="main-header" class="sec">
         <div class="inner scrolled">
           <div class="row upper">
-            <div class="logo left"><a href="http://jadn.co" title="Home" ontouchstart="">jadn.co</a></div>
+            <div class="logo left"><a href="http://jadn.co" id="home-btn" title="Home" ontouchstart="">jadn.co</a></div>
           </div>
-          <div class="row">
-            <div class="personal col-8">
+          <div class="row v-center">
+            <div class="personal col-8 v-center">
               <div class="name">Jaden Dessureault</div>
-              <div class="desc">I'm a young web developer from Winnipeg, Canada with a great passion for crafting intuitive &amp; beautiful products. Currently available for work.</div>
-              <a href="mailto:hello@jadn.co" class="contact-btn l-chevron" title="Email Jaden Dessureault (hello@jadn.co)" ontouchstart="">Contact Me</a>
+              <div class="desc">I'm a front-end developer from Winnipeg, Canada with a great passion for crafting intuitive &amp; beautiful products. Currently available for work.</div>
+              <a href="mailto:hello@jadn.co" id="m-email-btn" class="contact-btn l-chevron" title="Email Jaden Dessureault (hello@jadn.co)" ontouchstart="">Contact Me</a>
             </div>
           </div>
         </div>
-        <div class="photo-attr right">Photo by <a href="https://www.flickr.com/photos/randihausken/" target="_blank" title="Randi Hausken on Flickr">Randi Hausken</a></div>
+        <div class="photo-attr right">Photo by <a href="https://www.flickr.com/photos/randihausken/" id="photo-attr" target="_blank" title="Randi Hausken on Flickr">Randi Hausken</a></div>
       </header>
 
       <section id="what-i-do" class="sec">
@@ -61,12 +58,12 @@
             <div class="design skill col-6">
               <i class="icon"></i>
               <div class="title">Web &amp; UI Design</div>
-              <div class="text">Create engaging user interfaces for both mobile apps &amp; websites.</div>
+              <div class="text">Craft engaging and responsive interfaces for websites.</div>
             </div>
             <div class="development skill col-6">
               <i class="icon"></i>
               <div class="title">Web Development</div>
-              <div class="text">Use the latest technology to create an intuitive user experience and bring life to design.</div>
+              <div class="text">Create an intuitive user experience and bring life to design.</div>
             </div>
           </div>
         </div>
@@ -81,19 +78,19 @@
             <div class="project xv col-4 md-col-6">
               <div class="hover">
                 <div class="desc">Blogging platform built with PHP &amp; MySQL.</div>
-                <a href="/xv" class="learn-btn l-chevron" title="Learn more about this project." ontouchstart="">Learn More</a>
+                <a href="/xv" id="xv-learn" class="learn-btn l-chevron" title="Learn more about this project." ontouchstart="">Learn More</a>
               </div>
             </div>
             <div class="project dreamscape col-4 md-col-6">
               <div class="hover">
                 <div class="desc">A unique opportunity for investors.</div>
-                <a href="/dreamscape" class="learn-btn l-chevron" title="Learn more about this project." ontouchstart="">Learn More</a>
+                <a href="/dreamscape" id="dreamscape-learn" class="learn-btn l-chevron" title="Learn more about this project." ontouchstart="">Learn More</a>
               </div>
             </div>
             <div class="project prattle col-4 md-col-6">
               <div class="hover">
                 <div class="desc">Asynchronous web chatting application.</div>
-                <a href="/prattle" class="learn-btn l-chevron" title="Learn more about this project." ontouchstart="">Learn More</a>
+                <a href="/prattle" id="prattle-learn" class="learn-btn l-chevron" title="Learn more about this project." ontouchstart="">Learn More</a>
               </div>
             </div>
           </div>
@@ -103,12 +100,12 @@
       <section id="social" class="sec">
         <div class="inner">
           <div class="row">
-            <div class="s-link col-2 sm-col-2"><a class="linkedin" href="https://www.linkedin.com/in/jadendessureault" title="Jaden Dessureault on LinkedIn" ontouchstart=""></a></div>
-            <div class="s-link col-2 sm-col-2"><a class="dribbble" href="http://dribbble.com/jaden" title="Jaden Dessureault on Dribbble" ontouchstart=""></a></div>
-            <div class="s-link col-2 sm-col-2"><a class="github" href="http://github.com/jadnco" title="Jaden Dessureault on Github" ontouchstart=""></a></div>
-            <div class="s-link col-2 sm-col-2"><a class="flickr" href="http://flickr.com/by_jaden" title="Jaden Dessureault on Flickr" ontouchstart=""></a></div>
-            <div class="s-link col-2 sm-col-2"><a class="twitter" href="http://twitter.com/jadnco" title="Jaden Dessureault on Twitter" ontouchstart=""></a></div>
-            <div class="s-link col-2 sm-col-2"><a class="email" href="mailto:hello@jadn.co" title="Email Jaden Dessureault" ontouchstart=""></a></div>
+            <div class="s-link col-2 sm-col-2"><a class="linkedin" href="https://www.linkedin.com/in/jadendessureault" id="s-linkedin" title="Jaden Dessureault on LinkedIn" ontouchstart=""></a></div>
+            <div class="s-link col-2 sm-col-2"><a class="dribbble" href="http://dribbble.com/jaden" id="s-dribbble" title="Jaden Dessureault on Dribbble" ontouchstart=""></a></div>
+            <div class="s-link col-2 sm-col-2"><a class="github" href="http://github.com/jadnco" id="s-github" title="Jaden Dessureault on Github" ontouchstart=""></a></div>
+            <div class="s-link col-2 sm-col-2"><a class="flickr" href="http://flickr.com/by_jaden" id="s-flickr" title="Jaden Dessureault on Flickr" ontouchstart=""></a></div>
+            <div class="s-link col-2 sm-col-2"><a class="twitter" href="http://twitter.com/jadnco" id="s-twitter" title="Jaden Dessureault on Twitter" ontouchstart=""></a></div>
+            <div class="s-link col-2 sm-col-2"><a class="email" href="mailto:hello@jadn.co"  id="s-email" title="Email Jaden Dessureault" ontouchstart=""></a></div>
           </div>
         </div>
       </section>
@@ -116,7 +113,7 @@
       <footer id="main-footer" class="sec">
         <div class="inner scrolled">
           <div class="row">
-            <div class="crafted left sm-col-12"><a href="https://www.google.com/maps/place/Winnipeg,+MB,+Canada/" ontouchstart=""><span class="maple"></span>Handcrafted in Canada.</a></div>
+            <div class="crafted left sm-col-12"><a href="https://www.google.com/maps/place/Winnipeg,+MB,+Canada/" id="map-link" ontouchstart=""><span class="maple"></span>Handcrafted in Canada.</a></div>
             <div class="copyright right sm-col-12">Copyright &copy; 2014</div>
           </div>
         </div>

@@ -95,7 +95,6 @@ body.outlined * {
   width: 1000px;
   height: 100%;
   padding: 76px 0;
-  display: table;
   margin: 0 auto;
   border-bottom: 1px solid #f3f3f4;
 }
@@ -104,7 +103,7 @@ body.outlined * {
   width: 1000px;
   position: relative;
   margin: 0 auto;
-  display: table;
+  display: inline-block;
 }
 .row [class*="col-"]:first-child {
   margin-left: 0;
@@ -210,7 +209,6 @@ header,
 section,
 footer {
   width: 100%;
-  display: table;
 }
 
 section * {
@@ -280,7 +278,7 @@ strong {
 }
 #main-header .personal,
 #main-header .project-info {
-  margin-top: 110px;
+  margin-top: 156px;
 }
 #main-header .personal .name,
 #main-header .project-info .name {
@@ -459,6 +457,9 @@ strong {
 .project #main-header.project-hero {
   overflow: hidden;
 }
+.project #main-header.project-hero .project-info {
+  margin-top: 100px;
+}
 .project #main-header.project-hero .main-view {
   height: 394px;
   margin-top: 0px;
@@ -608,8 +609,9 @@ strong {
     background-size: 100% !important;
   }
 
-  body.project #main-header .main-view {
+  body.project.xv #main-header .main-view {
     background: url(../images/xv-main@2x.png) !important;
+    background-size: 100% !important;
   }
 
   body.home #portfolio .project.prattle {
@@ -617,8 +619,9 @@ strong {
     background-size: 100% !important;
   }
 
-  body.project #main-header .main-view {
+  body.project.prattle #main-header .main-view {
     background: url(../images/prattle-main@2x.png) !important;
+    background-size: 100% !important;
   }
 
   body.home #portfolio .project.dreamscape {
@@ -626,8 +629,9 @@ strong {
     background-size: 100% !important;
   }
 
-  body.project #main-header .main-view {
+  body.project.dreamscape #main-header .main-view {
     background: url(../images/dreamscape-main@2x.png) !important;
+    background-size: 100% !important;
   }
 }
 @media screen and (max-width: 1240px) {
@@ -700,6 +704,11 @@ strong {
     margin: 0 10px;
   }
 
+  .col-12 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   #main-header {
     height: 422px;
   }
@@ -708,9 +717,12 @@ strong {
   }
 
   body.home .personal {
-    margin-top: 60px !important;
+    margin-top: 190px !important;
   }
 
+  body.project #main-header .project-info {
+    margin-top: 68px !important;
+  }
   body.project #main-header .main-view {
     height: 316px !important;
   }
@@ -734,80 +746,90 @@ strong {
   body.project #photos [class*="col-"]:before {
     opacity: 0;
   }
+
+  #main-footer {
+    height: 200px;
+  }
 }
 @media screen and (max-width: 940px) {
   body {
-    padding: 100px 0;
+    padding: 0;
   }
 
   #container {
-    width: 700px;
+    width: 100%;
   }
 
   .inner,
   .row {
-    width: 620px;
+    width: 700px;
     position: relative;
   }
 
   .col-1 {
     width: 35px;
-    margin: 0 9px;
+    margin: 0 12.5px;
   }
 
   .col-2 {
-    width: 88px;
-    margin: 0 9px;
+    width: 95px;
+    margin: 0 12.5px;
   }
 
   .col-3 {
-    width: 141px;
-    margin: 0 9px;
+    width: 155px;
+    margin: 0 12.5px;
   }
 
   .col-4 {
-    width: 194px;
-    margin: 0 9px;
+    width: 215px;
+    margin: 0 12.5px;
   }
 
   .col-5 {
-    width: 247px;
-    margin: 0 9px;
+    width: 275px;
+    margin: 0 12.5px;
   }
 
   .col-6, .md-col-6 {
-    width: 300px;
-    margin: 0 9px;
+    width: 335px;
+    margin: 0 12.5px;
   }
 
   .col-7, .md-col-7 {
-    width: 353px;
-    margin: 0 9px;
+    width: 395px;
+    margin: 0 12.5px;
   }
 
   .col-8 {
-    width: 406px;
-    margin: 0 9px;
+    width: 455px;
+    margin: 0 12.5px;
   }
 
   .col-9 {
-    width: 459px;
-    margin: 0 9px;
+    width: 515px;
+    margin: 0 12.5px;
   }
 
   .col-10 {
-    width: 512px;
-    margin: 0 9px;
+    width: 575px;
+    margin: 0 12.5px;
   }
 
   .col-11 {
-    width: 565px;
-    margin: 0 9px;
+    width: 635px;
+    margin: 0 12.5px;
   }
 
   .col-12 {
-    width: 618px;
-    margin: 0 9px;
+    width: 695px;
+    margin: 0 12.5px;
+  }
+
+  .row,
+  .col-12 {
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .sec-title {
@@ -815,7 +837,7 @@ strong {
   }
 
   #main-header {
-    height: 480px;
+    height: 400px;
   }
   #main-header .inner {
     padding-top: 40px;
@@ -872,14 +894,15 @@ strong {
   }
 
   body.home #main-header .personal {
-    margin-top: 100px !important;
+    margin-top: 186px !important;
   }
 
   body.project #main-header .project-info {
-    margin-top: 120px;
+    margin-top: 75px;
   }
   body.project #main-header .main-view {
-    display: none;
+    height: 275px !important;
+    bottom: -78px !important;
   }
   body.project #photos .col-7 {
     height: 400px !important;
@@ -901,7 +924,7 @@ strong {
     margin-bottom: 38px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body {
     padding: 0;
   }
@@ -1031,8 +1054,8 @@ strong {
     margin: 0;
   }
 
-  body.project #main-header .row .upper {
-    display: table;
+  body.project #main-header .main-view {
+    display: none;
   }
   body.project #photos .col-7 {
     height: auto !important;
@@ -1109,6 +1132,9 @@ strong {
     display: none;
   }
 
+  .project #main-header .project-info {
+    padding-top: 40px;
+  }
   .project #proposal .roli .col-4:first-of-type {
     margin-bottom: 19px;
   }
