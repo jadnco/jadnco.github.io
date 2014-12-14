@@ -32,19 +32,21 @@
     </script>
   </head>
   <body class="home">
-    <div id="container" class="fade-in">
+    <div itemscope itemtype="http://schema.org/Person" id="container" class="fade-in">
       <header id="main-header" class="sec">
         <div class="inner scrolled">
           <div class="row upper">
-            <div class="logo left"><a href="http://jadn.co" id="home-btn" title="Home" ontouchstart="">jadn.co</a></div>
+            <div class="logo left"><a itemprop="url" href="http://jadn.co" id="home-btn" title="Home" ontouchstart="">jadn.co</a></div>
           </div>
           <div class="row v-center">
             <div class="personal col-8 v-center">
-              <div class="name">Jaden Dessureault</div>
-              <div class="desc">I'm a front-end web developer from Winnipeg, Canada with a great passion for crafting intuitive &amp; beautiful products. Currently available for work.</div>
-              <a href="mailto:hello@jadn.co" id="m-email-btn" class="contact-btn l-chevron" title="Email Jaden Dessureault (hello@jadn.co)" ontouchstart="">Contact Me</a>
+              <div itemprop="name" class="name">Jaden Dessureault</div>
+              <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress" class="desc">I'm a front-end web developer from
+                <span itemprop="addressLocality">Winnipeg</span>,
+                <span itemprop="addressCountry">Canada</span> with a great passion for crafting intuitive &amp; beautiful products. Currently available for work.</div>
+                <a href="mailto:hello@jadn.co" id="m-email-btn" class="contact-btn l-chevron" title="Email Jaden Dessureault (hello@jadn.co)" ontouchstart="">Contact Me</a>
+              </div>
             </div>
-          </div>
         </div>
         <div class="photo-attr right">Photo by <a href="https://www.flickr.com/photos/randihausken/" id="photo-attr" target="_blank" title="Randi Hausken on Flickr">Randi Hausken</a></div>
       </header>
@@ -104,7 +106,7 @@
           </div>
           <div class="row">
             <div class="testm col-9 md-col-12">
-              <blockquote>&quot;Jaden Dessureault is an excellent individual with a creative mind and the skills to back it up. He has an eye for perfection and strives to create amazing works quickly and professionally.&quot;</blockquote>
+              <blockquote>"Jaden Dessureault is an excellent individual with a creative mind and the skills to back it up. He has an eye for perfection and strives to create amazing works quickly and professionally."</blockquote>
               <div class="author">Darren Place, Visual Effects Artist</div>
             </div>
           </div>
@@ -119,7 +121,7 @@
             <div class="s-link col-2 sm-col-2"><a class="github" href="http://github.com/jadnco" id="s-github" title="Jaden Dessureault on Github" ontouchstart=""></a></div>
             <div class="s-link col-2 sm-col-2"><a class="flickr" href="http://flickr.com/by_jaden" id="s-flickr" title="Jaden Dessureault on Flickr" ontouchstart=""></a></div>
             <div class="s-link col-2 sm-col-2"><a class="twitter" href="http://twitter.com/jadnco" id="s-twitter" title="Jaden Dessureault on Twitter" ontouchstart=""></a></div>
-            <div class="s-link col-2 sm-col-2"><a class="email" href="mailto:hello@jadn.co"  id="s-email" title="Email Jaden Dessureault" ontouchstart=""></a></div>
+            <div class="s-link col-2 sm-col-2"><a class="email" href="mailto:hello@jadn.co" id="s-email" title="Email Jaden Dessureault" ontouchstart=""></a></div>
           </div>
         </div>
       </section>
@@ -128,10 +130,12 @@
         <div class="inner scrolled">
           <div class="row">
             <div class="crafted left sm-col-12"><a href="https://www.google.com/maps/place/Winnipeg,+MB,+Canada/" id="map-link" ontouchstart=""><span class="maple"></span>Handcrafted in Canada.</a></div>
-            <div class="copyright right sm-col-12">Copyright &copy; 2014</div>
+            <div class="copyright right sm-col-12">Copyright © 2014</div>
           </div>
         </div>
       </footer>
+
+      <meta itemprop="email" content="hello@jadn.co">
     </div>
   </body>
 </html>
