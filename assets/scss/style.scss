@@ -123,6 +123,8 @@ a {
   }
 
   &:hover {
+    text-decoration: underline;
+
     &[class*="-chevron"]:after {
       margin-left: 8px;
       opacity: 1;
@@ -387,9 +389,9 @@ strong {
 
 #testimonials {
   .testm {
-    q {
-      font-size: 28px;
-      line-height: 42px;
+    blockquote {
+      font-size: 24px;
+      line-height: 40px;
       display: block;
     }
 
@@ -748,7 +750,7 @@ strong {
   $gut-width: 25;
 
   @for $i from 1 through $columns {
-    .col-#{$i}#{if($i == 6, ", .md-col-6", "")}#{if($i == 7, ", .md-col-7", "")} {
+    .col-#{$i}#{if($i == 6, ", .md-col-6", "")}#{if($i == 7, ", .md-col-7", "")}#{if($i == 12, ", .md-col-12", "")} {
       width: #{$i * $col-width + $gut-width * ($i - 1)}px;
       margin: 0 #{$gut-width/2}px;
     }

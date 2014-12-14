@@ -139,6 +139,9 @@ a {
 a[class*="-chevron"] {
   display: inline-block !important;
 }
+a:hover {
+  text-decoration: underline;
+}
 a:hover[class*="-chevron"]:after {
   margin-left: 8px;
   opacity: 1;
@@ -385,9 +388,9 @@ strong {
   background-position: center;
 }
 
-#testimonials .testm q {
-  font-size: 28px;
-  line-height: 42px;
+#testimonials .testm blockquote {
+  font-size: 24px;
+  line-height: 40px;
   display: block;
 }
 #testimonials .testm .author {
@@ -821,7 +824,7 @@ strong {
     margin: 0 12.5px;
   }
 
-  .col-12 {
+  .col-12, .md-col-12 {
     width: 695px;
     margin: 0 12.5px;
   }
