@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://jadn.co</loc>
+    <loc>jadn.co</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://jadn.co/xv</loc>
+    <loc>jadn.co/xv</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://jadn.co/prattle</loc>
+    <loc>jadn.co/prattle</loc>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>http://jadn.co/dreamscape</loc>
+    <loc>jadn.co/dreamscape</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
