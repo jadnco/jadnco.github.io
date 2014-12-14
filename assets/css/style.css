@@ -293,6 +293,10 @@ strong {
   color: #fff;
   margin-top: 10px;
 }
+#main-header .personal .desc span,
+#main-header .project-info .desc span {
+  color: #fff !important;
+}
 #main-header .personal .contact-btn,
 #main-header .personal .live-btn,
 #main-header .project-info .contact-btn,
