@@ -377,17 +377,17 @@ strong {
   margin-top: 20px;
 }
 #portfolio .project.xv {
-  background: url(../images/xv-thumb.png) no-repeat;
+  background: url(../images/xv-thumb.jpg) no-repeat;
   background-size: 100%;
   background-position: center;
 }
 #portfolio .project.prattle {
-  background: url(../images/prattle-thumb.png) no-repeat;
+  background: url(../images/prattle-thumb.jpg) no-repeat;
   background-size: 100%;
   background-position: center;
 }
 #portfolio .project.dreamscape {
-  background: url(../images/dreamscape-thumb.png) no-repeat;
+  background: url(../images/dreamscape-thumb.jpg) no-repeat;
   background-size: 100%;
   background-position: center;
 }
@@ -612,7 +612,7 @@ strong {
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   body.home #portfolio .project.xv {
-    background: url(../images/xv-thumb@2x.png) center !important;
+    background: url(../images/xv-thumb@2x.jpg) center !important;
     background-size: 100% !important;
   }
 
@@ -622,7 +622,7 @@ strong {
   }
 
   body.home #portfolio .project.prattle {
-    background: url(../images/prattle-thumb@2x.png) center !important;
+    background: url(../images/prattle-thumb@2x.jpg) center !important;
     background-size: 100% !important;
   }
 
@@ -632,7 +632,7 @@ strong {
   }
 
   body.home #portfolio .project.dreamscape {
-    background: url(../images/dreamscape-thumb@2x.png) center !important;
+    background: url(../images/dreamscape-thumb@2x.jpg) center !important;
     background-size: 100% !important;
   }
 

@@ -383,7 +383,7 @@ strong {
 
     @each $project in $projects {
       &.#{$project} {
-        background: url(../images/#{$project}-thumb.png) no-repeat;
+        background: url(../images/#{$project}-thumb.jpg) no-repeat;
         background-size: 100%;
         background-position: center;
       }
@@ -636,7 +636,7 @@ strong {
     body.home {
       #portfolio {
         .project.#{$project} {
-          background: url(../images/#{$project}-thumb@2x.png) center !important;
+          background: url(../images/#{$project}-thumb@2x.jpg) center !important;
           background-size: 100% !important;
         }
       }
