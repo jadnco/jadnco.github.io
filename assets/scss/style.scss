@@ -1,3 +1,5 @@
+// sass --watch assets/scss/style.scss:assets/css/style.css  
+
 // Common colours
 $dark: #2c2c32; // #2E2E33;
 $grey: #878c94;
@@ -108,21 +110,18 @@ html {
 body {
   width: 100%;
   background: $light;
-  padding: 152px 0;
 
   &.mac {
     #main-header {
       background: linear-gradient(rgba($dark, 0.9),rgba($dark, 0.8)),
-        url(../images/snow.gif),
-        url(../images/forest.jpg);
-      background-size: cover, 200px, cover;
+        url(../images/rain-forest.jpg);
+      background-size: cover;
     }
 
     #main-footer {
       background: linear-gradient(rgba(#2c2c32, 0.8),rgba(#2c2c32, 0.9)),
-        url(../images/snow.gif),
-        url(../images/forest.jpg);
-      background-size: cover, 200px, cover;
+        url(../images/rain-forest.jpg);
+      background-size: cover;
     }
   }
 }
@@ -237,6 +236,11 @@ strong {
   background-size: cover;
   background-position: 0 50% !important;
   position: relative;
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
 
   .photo-attr {
     position: absolute;
