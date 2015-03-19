@@ -104,7 +104,8 @@ html {
 
 body {
   width: 100%;
-  background: #f8f8f7; }
+  background: #f8f8f7;
+  padding: 100px 0; }
   body.mac #main-header {
     background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/rain-forest.jpg);
     background-size: cover; }
