@@ -237,7 +237,8 @@ strong {
     color: #2c2c32; }
   #main-header .inner {
     border: 0; }
-  #main-header .logo {
+  #main-header .logo,
+  #main-header .email {
     color: #fff; }
   #main-header .portfolio-btn,
   #main-header .home-btn {
