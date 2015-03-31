@@ -22,7 +22,10 @@
     </script>
   </head>
   <body class="project prattle">
-    <div id="container">
+    <div itemscope itemtype="http://schema.org/WebSite" id="container">
+      <meta itemprop="creator" content="Jaden Dessureault">
+      <meta itemprop="thumbnailUrl" content="http://jadn.co/assets/images/prattle-thumb@2x.jpg">
+
       <header id="main-header" class="sec project-hero">
         <div class="inner scrolled">
           <div class="row upper">
@@ -30,8 +33,8 @@
           </div>
           <div class="row">
             <div class="project-info col-5">
-              <div class="name">Prattle</div>
-              <div class="desc">Easily start a new conversation between any device, through the web.</div>
+              <div itemprop="headline" class="name">Prattle</div>
+              <div itemprop="about" class="desc">Easily start a new conversation between any device, through the web.</div>
               <a href="http://dribbble.com/jaden/projects/228211-Prattle" id="m-prattle-dribbble" class="live-btn l-chevron">View on Dribbble</a>
             </div>
             <div class="main-view right col-7"></div>
