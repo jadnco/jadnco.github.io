@@ -217,7 +217,8 @@ strong {
   background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/rain-forest.jpg);
   background-size: cover;
   background-position: 0 50% !important;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   #main-header * {
     position: relative;
     z-index: 2; }
