@@ -76,27 +76,20 @@
       <section id="portfolio" class="sec">
         <div class="inner">
           <div class="row">
-            <h2 class="sec-title">Projects</h2>
+            <h2 class="sec-title">Portfolio</h2>
           </div>
           <div class="row">
-            <div class="project xv col-4 md-col-6">
-              <div class="hover">
-                <div class="desc">Blogging platform built with PHP &amp; MySQL.</div>
-                <a href="/xv" id="xv-learn" class="learn-btn l-chevron" title="Learn more about this project.">Learn More</a>
-              </div>
+            <div id="shots" class="clearfix">
+              <ul>
+                <li class="col-4 md-col-6 dribbble-shot"><img></li>
+                <li class="col-4 md-col-6 dribbble-shot"><img></li>
+                <li class="col-4 md-col-6 dribbble-shot"><img></li>
+                <li class="col-4 md-col-6 dribbble-shot"><img></li>
+                <li class="col-4 md-col-6 dribbble-shot"><img></li>
+                <li class="col-4 md-col-6 dribbble-shot"><img></li>
+              </ul>
             </div>
-            <div class="project dreamscape col-4 md-col-6">
-              <div class="hover">
-                <div class="desc">A unique opportunity for investors.</div>
-                <a href="/dreamscape" id="dreamscape-learn" class="learn-btn l-chevron" title="Learn more about this project.">Learn More</a>
-              </div>
-            </div>
-            <div class="project prattle col-4 md-col-6">
-              <div class="hover">
-                <div class="desc">Asynchronous web chatting application.</div>
-                <a href="/prattle" id="prattle-learn" class="learn-btn l-chevron" title="Learn more about this project.">Learn More</a>
-              </div>
-            </div>
+            <a href="http://dribbble.com/jaden" class="view-more d-chevron" title="View more work on Dribbble">View more work on Dribbble</a>
           </div>
         </div>
       </section>
@@ -104,10 +97,7 @@
       <section id="testimonials" class="sec">
         <div class="inner">
           <div class="row">
-            <div class="sec-title">Testimonial</div>
-          </div>
-          <div class="row">
-            <div class="testm col-9 md-col-12">
+            <div class="testm col-7 md-col-12">
               <blockquote>"Jaden Dessureault is an excellent individual with a creative mind and the skills to back it up. He has an eye for perfection and strives to create amazing works quickly and professionally."</blockquote>
               <div class="author">Darren Place, Visual Effects Artist</div>
             </div>
@@ -138,6 +128,9 @@
       </footer>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/dribbble.js" type="text/javascript"></script>
+    <script type="text/javascript">
+       getShotsForID(['jaden'], 'shots', 6);
+    </script>
   </body>
 </html>

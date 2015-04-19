@@ -333,15 +333,36 @@ strong {
     background: url(../images/dreamscape-thumb.jpg) no-repeat;
     background-size: 100%;
     background-position: center; }
+#portfolio #shots .dribbble-shot {
+  height: auto;
+  border: 1px solid #f3f3f4; }
+  #portfolio #shots .dribbble-shot a {
+    display: block; }
+    #portfolio #shots .dribbble-shot a img {
+      display: block;
+      width: 100%; }
+#portfolio .view-more {
+  display: table !important;
+  margin: 72px auto 0 auto !important; }
 
-#testimonials .testm blockquote {
-  font-size: 24px;
-  line-height: 40px;
+#testimonials .testm {
+  text-align: center;
+  margin: 0 auto;
+  float: none;
   display: block; }
-#testimonials .testm .author {
-  color: #878c94;
-  display: block;
-  margin-top: 38px; }
+  #testimonials .testm blockquote {
+    display: block; }
+    #testimonials .testm blockquote:before {
+      content: "\00AB\00BB";
+      text-align: center;
+      margin: 0 auto;
+      color: #878c94;
+      display: block;
+      font-family: serif; }
+  #testimonials .testm .author {
+    color: #878c94;
+    display: block;
+    margin-top: 38px; }
 
 #social .s-link {
   height: 38px;
@@ -621,6 +642,13 @@ strong {
 
   #main-footer {
     height: 200px; } }
+@media screen and (min-width: 940px) {
+  #shots .dribbble-shot:nth-of-type(3n) {
+    margin-right: 0; }
+  #shots .dribbble-shot:nth-of-type(3n+1) {
+    margin-left: 0; }
+  #shots .dribbble-shot:nth-of-type(n+4) {
+    margin-top: 72px; } }
 @media screen and (max-width: 940px) {
   body {
     padding: 0; }
@@ -688,6 +716,9 @@ strong {
 
   .sec-title {
     text-align: center; }
+
+  #shots .dribbble-shot:nth-of-type(n+3) {
+    margin-top: 72px; }
 
   #main-header {
     height: 400px; }
@@ -951,7 +982,10 @@ strong {
     display: block;
     float: none;
     margin: 0 auto;
-    text-align: center; } }
+    text-align: center; }
+
+  #shots .dribbble-shot:not(:first-of-type) {
+    margin-top: 72px; } }
 @-webkit-keyframes c-fade-in {
   from {
     opacity: 0;

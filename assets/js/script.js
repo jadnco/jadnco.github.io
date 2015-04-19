@@ -10,6 +10,8 @@ var notWindows = false,
 for (var i = 0; i < platforms.length; i++) {
   if (currentPlatform === platforms[i]) {
     notWindows = true;
+
+    return;
   }
 }
 

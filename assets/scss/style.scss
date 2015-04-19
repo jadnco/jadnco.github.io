@@ -411,14 +411,51 @@ strong {
       }
     }
   }
+
+  #shots .dribbble-shot {
+    height: auto;
+    border: 1px solid lighten($grey, 40%);
+
+    
+
+    a {
+      display: block;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .view-more {
+    display: table !important;
+    margin: 72px auto 0 auto !important;
+  }
 }
 
 #testimonials {
   .testm {
+    text-align: center; 
+    margin: 0 auto;
+    float: none;
+    display: block;
+
+    
+
     blockquote {
-      font-size: 24px;
-      line-height: 40px;
+      //font-size: 24px;
+      //line-height: 40px;
       display: block;
+
+      &:before {
+        content: "\00AB\00BB";
+        text-align: center;
+        margin: 0 auto;
+        color: $grey;
+        display: block;
+        font-family: serif;
+      }
     }
 
     .author {
@@ -755,6 +792,22 @@ strong {
   }
 }
 
+@media screen and (min-width: 940px) {
+  #shots .dribbble-shot {
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-of-type(3n+1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(n+4) {
+      margin-top: 72px; 
+    } 
+  }
+}
+
 @media screen and (max-width: 940px) {
   body {
     padding: 0;
@@ -790,6 +843,21 @@ strong {
   .sec-title {
     text-align: center;
   }
+
+  #shots .dribbble-shot {
+    &:nth-of-type(3n) {
+      //margin-right: auto !important;
+    }
+
+    &:nth-of-type(3n+1) {
+      //margin-left: 2px !important;
+    } 
+
+    &:nth-of-type(n+3) {
+      margin-top: 72px; 
+    }
+  }
+
 
   #main-header {
     height: 400px;
@@ -1142,6 +1210,12 @@ strong {
       float: none;
       margin: 0 auto;
       text-align: center;
+    }
+  }
+
+  #shots .dribbble-shot {
+    &:not(:first-of-type) {
+      margin-top: 72px;
     }
   }
 }
