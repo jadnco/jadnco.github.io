@@ -107,10 +107,10 @@ body {
   background: #f8f8f7;
   padding: 100px 0; }
   body.mac #main-header {
-    background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/rain-forest.jpg);
+    background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/water-photo.jpg);
     background-size: cover; }
   body.mac #main-footer {
-    background: linear-gradient(rgba(44, 44, 50, 0.8), rgba(44, 44, 50, 0.9)), url(../images/rain-forest.jpg);
+    background: linear-gradient(rgba(44, 44, 50, 0.8), rgba(44, 44, 50, 0.9)), url(../images/water-photo.jpg);
     background-size: cover; }
 
 a {
@@ -214,7 +214,7 @@ strong {
 #main-header {
   width: 100%;
   height: 500px;
-  background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.8)), url(../images/rain-forest.jpg);
+  background: linear-gradient(rgba(44, 44, 50, 0.9), rgba(44, 44, 50, 0.6)), url(../images/water-photo.jpg);
   background-size: cover;
   background-position: 0 50% !important;
   position: relative;
@@ -505,7 +505,7 @@ strong {
 
 #main-footer {
   width: 100%;
-  background: linear-gradient(rgba(44, 44, 50, 0.8), rgba(44, 44, 50, 0.9)), url(../images/rain-forest.jpg);
+  background: linear-gradient(rgba(44, 44, 50, 0.8), rgba(44, 44, 50, 0.9)), url(../images/water-photo.jpg);
   background-size: cover;
   background-position: 0 85% !important; }
   #main-footer ::selection {
