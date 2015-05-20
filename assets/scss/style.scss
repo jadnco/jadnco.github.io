@@ -7,16 +7,6 @@ $light: #f8f8f7;
 
 $projects: xv prattle dreamscape; // showcase
 
-#outline {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-}
-
-body.outlined * {
-  outline: 1px dashed rgba(red, 0.6);
-}
-
 // Custom vendor prefix mixin
 @mixin prefix($property, $value) {
   -webkit-#{$property}: #{$value};
@@ -109,7 +99,7 @@ html {
 
 body {
   width: 100%;
-  background: $light;
+  background: $dark;
   padding: 100px 0;
 
   &.mac {
@@ -232,7 +222,7 @@ strong {
 #main-header {
   width: 100%;
   height: 500px;
-  background: linear-gradient(rgba($dark, 0.9),rgba($dark, 0.6)),
+  background: linear-gradient(rgba($light, 1),rgba($light, 0.8)),
               url(../images/water-photo.jpg);
   background-size: cover;
   background-position: 0 50% !important;
@@ -250,7 +240,7 @@ strong {
     right: 10px;
     display: inline;
     font-size: 12px;
-    color: $light;
+    color: $dark;
     opacity: 0.2;
 
     a {
@@ -270,12 +260,12 @@ strong {
 
   .logo,
   .email {
-    color: #fff;
+    color: $dark;
   }
 
   .portfolio-btn,
   .home-btn {
-    color: #fff;
+    color: $dark;
   }
 
   .personal,
@@ -283,22 +273,22 @@ strong {
     margin-top: 156px;
 
     .name {
-      color: #fff;
+      color: $dark;
       font-size: 28px;
     }
 
     .desc {
-      color: #fff;
+      color: $dark;
       margin-top: 10px;
 
       span {
-        color: #fff !important;
+        color: $dark !important;
       }
     }
 
     .contact-btn,
     .live-btn {
-      color: #fff;
+      color: $dark;
       margin-top: 20px;
     }
   }
@@ -416,8 +406,6 @@ strong {
     height: auto;
     border: 1px solid lighten($grey, 40%);
 
-    
-
     a {
       display: block;
 
@@ -441,15 +429,13 @@ strong {
     float: none;
     display: block;
 
-    
-
     blockquote {
       //font-size: 24px;
       //line-height: 40px;
       display: block;
 
       &:before {
-        content: "\00AB\00BB";
+        content: "";
         text-align: center;
         margin: 0 auto;
         color: $grey;
@@ -657,8 +643,7 @@ strong {
 
 #main-footer {
   width: 100%;
-  background: linear-gradient(rgba(#2c2c32, 0.8),rgba(#2c2c32, 0.9)),
-              url(../images/water-photo.jpg);
+  background: $light;
   background-size: cover;
   background-position: 0 85% !important;
 
@@ -673,7 +658,7 @@ strong {
 
   .crafted,
   .copyright {
-    color: #fff;
+    color: $dark;
     line-height: 35px;
 
     .maple {
