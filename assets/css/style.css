@@ -211,6 +211,9 @@ strong {
   background-position: 0 50% !important;
   position: relative;
   overflow: hidden; }
+  #main-header ::selection {
+    background: #2c2c32;
+    color: #f8f8f7; }
   #main-header * {
     position: relative;
     z-index: 2; }
@@ -225,9 +228,6 @@ strong {
     #main-header .photo-attr a {
       font-size: 12px;
       text-decoration: underline; }
-  #main-header ::selection {
-    background: #f8f8f7;
-    color: #2c2c32; }
   #main-header .inner {
     border: 0; }
   #main-header .logo,
@@ -344,6 +344,9 @@ strong {
   display: block; }
   #testimonials .testm blockquote {
     display: block; }
+    #testimonials .testm blockquote ::selection {
+      background: #2c2c32;
+      color: #f8f8f7; }
     #testimonials .testm blockquote:before {
       content: "";
       text-align: center;
@@ -390,119 +393,14 @@ strong {
     background: url(../images/email.svg) no-repeat;
     background-size: 38px 38px; }
 
-.project.xv .main-view {
-  background: url(../images/xv-main.png) no-repeat;
-  background-size: 100%;
-  background-position: center; }
-.project.prattle .main-view {
-  background: url(../images/prattle-main.png) no-repeat;
-  background-size: 100%;
-  background-position: center; }
-.project.dreamscape .main-view {
-  background: url(../images/dreamscape-main.png) no-repeat;
-  background-size: 100%;
-  background-position: center; }
-.project #main-header.project-hero {
-  overflow: hidden; }
-  .project #main-header.project-hero .project-info {
-    margin-top: 100px; }
-  .project #main-header.project-hero .main-view {
-    height: 394px;
-    margin-top: 0px;
-    box-shadow: -10px -1px 16px -10px rgba(0, 0, 0, 0.4);
-    border-bottom: 1px solid #f3f3f4;
-    position: absolute; }
-.project p {
-  color: #878c94; }
-.project h1 {
-  font-size: 28px;
-  color: #2c2c32;
-  clear: both; }
-  .project h1:first-child {
-    margin-bottom: 38px; }
-.project code {
-  display: inline-block;
-  padding: 5px 10px 6px 10px;
-  background: #f3f3f4;
-  font-family: monospace; }
-.project #proposal .roli {
-  margin-bottom: 38px; }
-  .project #proposal .roli .col-5 {
-    color: #878c94; }
-.project #proposal p:not(:last-of-type) {
-  margin-bottom: 38px; }
-.project #techs .thrw:not(:last-of-type) {
-  margin-bottom: 38px; }
-.project #techs .tech {
-  color: #878c94; }
-.project #techs .check-out {
-  color: #878c94;
-  margin-top: 38px; }
-  .project #techs .check-out a {
-    text-decoration: underline; }
-.project #photos [class*="col-"] {
-  background: #878c94;
-  display: block;
-  background-size: cover !important;
-  background-position: center center;
-  position: relative;
-  overflow: hidden;
-  -webkit-filter: grayscale(50%);
-  -moz-filter: grayscale(50%);
-  -ms-filter: grayscale(50%);
-  -o-filter: grayscale(50%);
-  filter: grayscale(50%); }
-  .project #photos [class*="col-"]:hover {
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-    filter: grayscale(0%); }
-    .project #photos [class*="col-"]:hover:before {
-      opacity: 0; }
-  .project #photos [class*="col-"]:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(44, 44, 50, 0.8), rgba(44, 44, 50, 0.7));
-    display: block;
-    position: absolute;
-    z-index: 2;
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    transition: all 0.2s; }
-  .project #photos [class*="col-"] img {
-    float: left;
-    width: 100%; }
-.project #photos .row:first-of-type .col-7 {
-  height: 500px; }
-.project #photos .row:first-of-type .col-5 {
-  height: 268px;
-  margin-right: 0; }
-  .project #photos .row:first-of-type .col-5 img {
-    margin-top: -40px; }
-  .project #photos .row:first-of-type .col-5:nth-of-type(2) {
-    height: 200px;
-    margin-bottom: 32px; }
-    .project #photos .row:first-of-type .col-5:nth-of-type(2) img {
-      margin-top: -80px; }
-.project #photos .row:nth-of-type(2) {
-  margin-top: 32px; }
-  .project #photos .row:nth-of-type(2) .col-8 {
-    height: 300px; }
-  .project #photos .row:nth-of-type(2) .col-4 {
-    height: 300px; }
-
 #main-footer {
   width: 100%;
   background: #f8f8f7;
   background-size: cover;
   background-position: 0 85% !important; }
   #main-footer ::selection {
-    background: #f8f8f7;
-    color: #2c2c32; }
+    background: #2c2c32;
+    color: #f8f8f7; }
   #main-footer .inner {
     border: 0; }
   #main-footer .crafted,
