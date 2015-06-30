@@ -2,13 +2,12 @@
   "base/variables",
   "base/functions",
   "base/grid",
-  "base/base",
+  "base/base";
 
-  "components/header",
-  "components/footer",
+@import "components/*";
 
-  "pages/home";
+@import "pages/**/*";
 
 * {
-  //outline: 1px solid grey;
+  //outline: 1px dashed rgba(grey, 0.2);
 }

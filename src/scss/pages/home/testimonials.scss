@@ -1,0 +1,23 @@
+#testimonials {
+  blockquote {
+    text-align: center;
+
+    .quote {
+      //font-style: italic;
+    }
+
+    .author {
+      margin-top: ws(medium);
+      font-style: italic;
+
+      span {
+        color: color(grey);
+
+        &:before {
+          content: "\\";
+          margin: 0 ws(tiny);
+        }
+      }
+    }
+  }
+}

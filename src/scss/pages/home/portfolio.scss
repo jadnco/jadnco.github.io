@@ -1,0 +1,20 @@
+#portfolio {
+  .row:nth-of-type(even) {
+    margin-top: ws(x-large);
+  }
+
+  .project {
+    .title {
+      font-weight: bold;
+    }
+
+    .stack {
+      color: color(grey);
+      font-style: italic;
+    }
+
+    .desc {
+      margin-top: ws(small);
+    }
+  }
+}

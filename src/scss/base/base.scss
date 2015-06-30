@@ -20,7 +20,7 @@ body {
 body {
   font: font(default);
   color: color(black);
-  background: color(pearl);
+  background: color(white);
 }
 
 a {
@@ -41,13 +41,25 @@ a {
 }
 
 .sec {
+  overflow: hidden;
+  border-top: 1px solid color(light);
+
+  &:nth-of-type(odd) {
+    background: lighten(color(light), 4%);
+  }
+
   .inner {
     padding: ws(xx-large) 0;
   }
-  
-  &:nth-of-type(odd) {
-    .inner {
-      border-top: 1px solid color(light);
-    }
+
+  // .sec-title {
+  //   position: absolute;
+  //   font: font(xx-large);
+  //   color: rgba(color(blue), 0.3);
+  //   top: - ws(large);
+  // }
+
+  .sec-title {
+    margin-bottom: ws(large);
   }
 }

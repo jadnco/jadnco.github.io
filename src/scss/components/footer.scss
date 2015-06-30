@@ -1,0 +1,16 @@
+#main-footer {
+  background: color(white);
+  .inner {
+    padding: ws(medium) 0;
+
+    .columns {
+      &:nth-of-type(2) {
+        text-align: right;
+      }
+    }
+  }
+
+  .email {
+    text-align: right;
+  }
+}

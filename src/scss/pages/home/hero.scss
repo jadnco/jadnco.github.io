@@ -1,0 +1,19 @@
+#hero {
+  color: color(white);
+  background: linear-gradient(color(blue), rgba(color(blue), 0.8)),
+              url(../images/hero-view-1.jpg) bottom;
+  background-size: cover;
+  text-align: center;
+  border: none;
+
+  .inner {
+    padding: ws(xxx-large) 0;
+  }
+  .name {
+    font: font(large);
+  }
+
+  .desc {
+    color: rgba(color(white), 0.5);
+  }
+}

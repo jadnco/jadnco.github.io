@@ -1,41 +1,5 @@
 #home {
-  #hero {
-    height: 260px;
-    background: linear-gradient(color(light), rgba(color(light), 0.8)),
-                url(../images/hero-view-1.jpg) bottom;
-    background-size: cover;
-
-    .name {
-      font: font(large);
-      color: color(black);
-      //text-transform: uppercase;
-      //letter-spacing: ws(tiny);
-    }
-  }
-
-  #awards,
   #services {
     overflow: hidden;
-    .sec-title {
-      font: font(xx-large);
-      position: absolute;
-      color: color(light);
-      z-index: -1;
-      margin-top: - ws(medium);
-    }
-
-    .award {
-      .title {
-        font-weight: bold;
-      }
-
-      .org {
-        color: color(grey);
-      }
-
-      .desc {
-        margin-top: ws(small-medium);
-      }
-    }
   }
 }

@@ -1,0 +1,16 @@
+#awards {
+  .award {
+    .title {
+      font-weight: bold;
+    }
+
+    .org {
+      color: color(grey);
+      font-style: italic;
+    }
+
+    .desc {
+      margin-top: ws(small);
+    }
+  }
+}
