@@ -1,0 +1,22 @@
+#fof {
+  .fof {
+    text-align: center;
+
+    &.inner {
+      padding: ws(xxx-large) 0;
+    }
+  }
+
+  .num {
+    font: font(x-large);
+    font-weight: bold;
+  }
+
+  .message {
+    font-style: italic;
+  }
+
+  .home {
+    margin-top: ws(medium);
+  }
+}

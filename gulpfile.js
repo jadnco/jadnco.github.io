@@ -24,7 +24,8 @@ gulp.task('styles', function() {
     .pipe(sassGlob())
     .on('error', util.log)
     .pipe(sass({
-      includePaths: ['src/scss']
+      includePaths: ['src/scss'],
+      outputStyle: 'compressed'
     }))
     .on('error', util.log)
     .pipe(prefixer('last 2 versions'))
@@ -95,7 +96,8 @@ gulp.task('watch', function() {
 
 gulp.task('deploy', function() {
   gulp.src(['dist/**/*'])
-    .pipe(ghPages());
+    .pipe(ghPages())
+    .on('error', util.log);
 });
 
 gulp.task('default', ['watch', 'serve', 'images', 'styles', 'scripts', 'templates']);
