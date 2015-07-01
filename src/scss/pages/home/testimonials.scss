@@ -1,10 +1,22 @@
 #testimonials {
+  .inner {
+    background: lighten(color(light), 4%);
+  }
+
+  @media (max-width: 1000px) {
+    &.sec {
+      background: lighten(color(light), 4%);
+    }
+  }
+
+  @media (max-width: 550px) {
+    blockquote {
+      text-align: left !important;
+    }
+  }
+
   blockquote {
     text-align: center;
-
-    .quote {
-      //font-style: italic;
-    }
 
     .author {
       margin-top: ws(medium);

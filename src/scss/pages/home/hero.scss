@@ -1,19 +1,66 @@
 #hero {
   color: color(white);
-  background: linear-gradient(color(blue), rgba(color(blue), 0.8)),
-              url(../images/hero-view-1.jpg) bottom;
-  background-size: cover;
   text-align: center;
   border: none;
 
   .inner {
-    padding: ws(xxx-large) 0;
+    padding-top: ws(xxx-large);
+    padding-bottom: ws(xxx-large);
+    background: linear-gradient(color(light), rgba(color(light), 0.8)),
+              url(../images/hero-view-1.jpg) bottom;
+    background-size: cover;
+    border-top: none;
   }
+
+  @media (max-width: 1000px) {
+    &.sec {
+      background: linear-gradient(color(light), rgba(color(light), 0.8)),
+              url(../images/hero-view-1.jpg) bottom;
+      background-size: cover;
+
+      .inner {
+        background: none;
+      }
+    }
+  }
+
   .name {
     font: font(large);
+    color: color(black);
   }
 
   .desc {
-    color: rgba(color(white), 0.5);
+    color: color(grey);
+    font-style: italic;
+  }
+
+  .social-links {
+    list-style: none;
+    margin-top: ws(medium);
+
+    li {
+      display: inline-block;
+      color: color(black);
+      margin: 0 ws(tiny);
+
+      a {
+        &:after {
+          background: rgba(color(black), 0.1);
+        }
+      }
+    }
+  }
+
+  .attribute {
+    position: absolute;
+    right: ws(tiny);
+    bottom: ws(tiny);
+    color: rgba(color(grey), 0.6);
+    font: font(tiny);
+    font-style: italic;
+
+    &:after {
+      display: none;
+    }
   }
 }
