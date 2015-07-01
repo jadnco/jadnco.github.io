@@ -11,9 +11,11 @@ var gulp        = require('gulp'),
     ghPages     = require('gulp-gh-pages'),
     sassGlob    = require('gulp-sass-bulk-import');
 
+var dist = './';
+
 gulp.task('serve', function() {
   browserSync.init({
-    server: './dist',
+    server: dist,
     open: false,
     notify: false
   });
@@ -30,7 +32,7 @@ gulp.task('styles', function() {
     .on('error', util.log)
     .pipe(prefixer('last 2 versions'))
     .on('error', util.log)
-    .pipe(gulp.dest('dist/css/'))
+    .pipe(gulp.dest(dist + 'css/'))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -50,7 +52,7 @@ gulp.task('templates', function() {
       extname: '.html'
     }))
     .on('error', util.log)
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest(dist))
     .pipe(browserSync.reload({stream: true}));
 });
 
@@ -63,7 +65,7 @@ gulp.task('scripts', function() {
     .on('error', util.log)
     .pipe(uglify())
     .on('error', util.log)
-    .pipe(gulp.dest('dist/js/'));
+    .pipe(gulp.dest(dist + 'js/'));
 
   /*
   * Uglify JS libs and move to dist folder
@@ -75,12 +77,12 @@ gulp.task('scripts', function() {
       suffix: '.min'
     }))
     .on('error', util.log)
-    .pipe(gulp.dest('dist/js/libs'));
+    .pipe(gulp.dest(dist + 'js/libs'));
 });
 
 gulp.task('images', function() {
   gulp.src(['src/images/**/*.{jpg,png,gif,svg}'])
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest(dist + 'images'));
 });
 
 gulp.task('clean:images', function(a) {
