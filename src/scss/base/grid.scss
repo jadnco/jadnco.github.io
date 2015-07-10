@@ -16,15 +16,16 @@
 .columns {
   width: 100%;
   box-sizing: border-box;
-  display: inline-block; }
+  display: inline-block;
+  float: left; }
 .column:not(:first-of-type),
 .columns:not(:first-of-type) {
-  margin-top: ws(large);  
-}
+  margin-top: ws(large); }
 .column.center,
 .columns.center {
   margin: 0 auto !important;
-  display: block; }
+  display: block;
+  float: none; }
 .columns.right,
 .columns.right {
   float: right; }
@@ -64,11 +65,6 @@
   .two.columns                    { width: 13.3333333333%; }
   .three.columns                  { width: 22%;            }
   .four.columns                   { width: 30.6666666667%; }
-  @-moz-document url-prefix()     {
-    .four.columns {
-      width: 30.2667%;
-    }
-  }
   .five.columns                   { width: 39.3333333333%; }
   .six.columns                    { width: 48%;            }
   .seven.columns                  { width: 56.6666666667%; }
