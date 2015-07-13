@@ -1,8 +1,4 @@
 #testimonials {
-  .inner {
-    background: lighten(color(light), 4%);
-  }
-
   @media (max-width: 1000px) {
     &.sec {
       background: lighten(color(light), 4%);

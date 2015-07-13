@@ -1,0 +1,15 @@
+#availability {
+  .inner {
+    background: lighten(color(light), 4%);
+    text-align: center;
+  }
+
+  @media (max-width: 1000px) {
+    &.sec {
+      background: lighten(color(light), 4%);
+    }
+  }
+
+  .email {
+  }
+}

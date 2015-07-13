@@ -1,4 +1,8 @@
 #awards {
+  .inner {
+    background: lighten(color(light), 4%);
+  }
+
   .award {
     .title {
       font-weight: bold;
