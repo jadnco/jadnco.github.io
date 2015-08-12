@@ -1,4 +1,4 @@
-$font-family: Amiri, Lora, serif;
+$font-family: Inconsolata, monospace;
 
 $colors: (
   white: #FFFFFF,
@@ -9,20 +9,26 @@ $colors: (
 );
 
 $whitespace: (
-  xxx-large: 8rem,
+  xxxx-large: 8rem,
+  xxx-large: 6.5rem,
   xx-large: 5rem,
   x-large: 4rem,
   large: 3rem,
+  x-medium: 2.25rem,
   medium: 2rem,
   small: 1.2rem,
-  tiny: 0.4rem
+  x-small: 0.7rem,
+  xx-small: 0.25rem
 );
 
 $font-size: (
-  default: 18px/1.35,
-  xx-large: 8rem/1.0,
+  default: 16px/1.35,
+  xxx-large: 18rem/0.9,
+  xx-large: 8rem/1.05,
   x-large: 5rem/1.0,
-  large: 3rem/1.0,
-  medium: 1.6rem/1.2,
+  large: 3rem/1.2,
+  x-medium: 2.2rem/1.2,
+  medium: 1.2rem/1.4,
+  small: 1rem/1.6,
   tiny: 0.8rem/1.0
 );
