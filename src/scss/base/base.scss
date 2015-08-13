@@ -45,16 +45,3 @@ a {
     }
   }
 }
-
-@-moz-document url-prefix() {
-  a {
-    &:hover {
-      text-decoration: none;
-
-      &:after {
-        height: 14px;
-        bottom: 2px;
-      }
-    }
-  }
-}
