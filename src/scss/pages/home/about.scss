@@ -1,8 +1,14 @@
 #about,
 #four-o-four {
   .five.columns {
-    padding: ws(x-large);
+    padding: ws(medium);
     background: color(white);
+  }
+
+  @media (min-width: 1000px) {
+    .five.columns {
+      padding: ws(large);
+    }
   }
 
   .desc {
