@@ -17,7 +17,8 @@ gulp.task('serve', function() {
   browserSync.init({
     server: dist,
     open: false,
-    notify: false
+    notify: false,
+    online: false
   });
 });
 
@@ -102,4 +103,4 @@ gulp.task('deploy', function() {
     .on('error', util.log);
 });
 
-gulp.task('default', ['watch', 'serve', 'images', 'styles', 'scripts', 'templates']);
+gulp.task('default', ['watch', 'templates', 'images', 'styles', 'scripts', 'serve']);
