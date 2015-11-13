@@ -21,6 +21,21 @@ body {
   font: font(default);
   color: color(black);
   background: color(light);
+
+  &.night {
+    background: color(dark);
+    color: color(white);
+
+    .five.columns {
+      background: color(black) !important;
+    }
+
+    a:hover {
+      &:after {
+        background: color(dark);
+      }
+    }
+  }
 }
 
 a {
