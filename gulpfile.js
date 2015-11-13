@@ -67,7 +67,7 @@ gulp.task('scripts', function() {
     .pipe(uglify())
     .on('error', util.log)
     .pipe(gulp.dest(dist + 'js/'))
-    .pipe(browserSync.reload({stream: true}));;
+    .pipe(browserSync.reload({stream: true}));
 
   /*
   * Uglify JS libs and move to dist folder
@@ -80,7 +80,7 @@ gulp.task('scripts', function() {
     }))
     .on('error', util.log)
     .pipe(gulp.dest(dist + 'js/libs'))
-    .pipe(browserSync.reload({stream: true}));;
+    .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('images', function() {
