@@ -1,1 +1,1 @@
-var now=new Date;document.body.className+=now.getHours()>=18?" night":"";
+var now=new Date,hours=now.getHours();document.body.className+=hours>=18||6>=hours?" night":"";

@@ -1,3 +1,4 @@
-var now = new Date();
+var now = new Date(),
+    hours = now.getHours();
 
-document.body.className += now.getHours() >= 18 ? ' night' : '';
+document.body.className += hours >= 18 || hours <= 6 ? ' night' : '';
