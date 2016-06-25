@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>Jaden Dessureault - Designer &amp; Developer</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Designer &amp; Developer from Winnipeg, Manitoba, Canada.">
+    <meta name="description" content="Designer &amp; Developer from Canada.">
 
-    <meta property="og:description" content="Designer &amp; Developer from Winnipeg, Manitoba, Canada.">
+    <meta property="og:description" content="Designer &amp; Developer from Canada.">
     <meta property="og:site_name" content="Jaden Dessureault">
     <meta property="og:title" content="Jaden Dessureault - Designer &amp; Developer">
     <meta property="og:type" content="website">
@@ -15,7 +15,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@jadnco">
     <meta name="twitter:title" content="Jaden Dessureault">
-    <meta name="twitter:description" content="Designer &amp; Developer from Winnipeg, Manitoba, Canada.">
+    <meta name="twitter:description" content="Designer &amp; Developer from Canada.">
 
     <meta name="theme-color" content="#F1F1F1">
 
@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon" href="images/light-avatar-small.png" sizes="180x180">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Inconsolata:400,700">
+    <link rel="stylesheet" href="css/flexboxgrid.min.css">
     <link rel="stylesheet" href="css/main.css">
 
     <script>
@@ -37,20 +37,44 @@
       ga('send', 'pageview');
     </script>
   </head>
-  <body class="fof">
-<section id="four-o-four" class="sec">
-  <div class="inner">
-    <div class="row">
-      <div class="five columns">
-        <div class="name">404</div>
-        <div class="work">You seem lost. There's nothing here.</div>
-        <a class="email" href="/" title="Go home">Go back home</a>
+  <body class="four-o-four">
+    <div class="container-fluid">
+      <div class="row">
+        <div id="about" class="about-card col-xs-12 col-sm-5">
+          <div class="error">404</div>
+          <div class="message">Page not found</div>
+          
+          <a href="/" title="Go back to jaden.io">
+            Go back home
+          </a>
+
+          <div id="shadow" class="shadow"></div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-  <script type="text/javascript" src="js/bundle.js"></script>
+    <script type="text/javascript">
 
+      // Colors via http://randoma11y.com
+      var colors = [
+        ['#fcd17c', '#231a6a'],
+        ['#93acd9', '#141e6b'],
+        ['#4a57e3', '#a6fe83'],
+        ['#344ba2', '#52ffba'],
+        ['#188178', '#f4fdf5'],
+        ['#3f7076', '#daf87e'],
+        ['#d46561', '#031852'],
+        ['#728794', '#1c0d3a'],
+      ];
+
+      var set = colors[Math.floor(Math.random() * colors.length)];
+      var variant = Math.round(Math.random());
+
+      var about = document.getElementById('about');
+      var shadow = document.getElementById('shadow');
+
+      about.style.backgroundColor = set[variant | 0];
+      about.style.color = shadow.style.backgroundColor = set[!variant | 0];
+    </script>
   </body>
 </html>
