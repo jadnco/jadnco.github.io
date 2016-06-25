@@ -13,21 +13,21 @@ a {
 }
 
 .container-fluid {
-  padding: 4rem;
+  padding: 1.5rem;
   max-width: 66rem;
 }
 
 .about-card {
   position: relative;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .about-card .shadow {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 1rem;
-  left: 1rem;
+  top: 0.5rem;
+  left: 0.5rem;
   z-index: -1;
 }
 
@@ -47,4 +47,19 @@ a {
 .about-card .email {
   display: inline-block;
   margin-top: 2rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .container-fluid {
+    padding: 4rem;
+  }
+
+  .about-card {
+    padding: 2rem;
+  }
+
+  .about-card .shadow {
+    top: 1rem;
+    left: 1rem;
+  }
 }
