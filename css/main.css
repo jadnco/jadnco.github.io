@@ -48,7 +48,8 @@ strong {
   padding-bottom: 2rem;
 }
 
-.about-card .role {
+.about-card .role,
+.about-card .message {
   color: #888;
 }
 
