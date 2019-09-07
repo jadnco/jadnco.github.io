@@ -24,6 +24,7 @@
     <link rel="apple-touch-icon" href="images/light-avatar-small.png" sizes="180x180">
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:500,700&display=swap">
     <link rel="stylesheet" href="css/flexboxgrid.min.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -40,15 +41,17 @@
   <body class="home">
     <div class="container-fluid">
       <div class="row">
-        <div id="about" class="about-card col-xs-12 col-sm-9 col-md-5">
-          <div class="name">Jaden Dessureault</div>
-          <div class="role">Designer &amp; Developer</div>
+        <span id="memoji" class="col-xs-12 col-sm-3 col-md-2"></span>
+
+        <span id="about" class="about-card col-xs-12 col-sm-9 col-md-7 col-lg-5">
+          <strong class="name">Jaden Dessureault</strong>
+          <div class="role">Developer &amp; Designer</div>
 
           <div class="info">
-            Design work can be found on
+            Passionate about crafting engaging products &mdash; Design work can be found on
             <a href="https://dribbble.com/jaden" title="jaden on Dribbble">Dribbble</a>,
             code on
-            <a href="https://github.com/jadnco" title="jadnco on Github">GitHub</a>
+            <a href="https://github.com/jadnco" title="jadnco on Github">GitHub</a>,
             and everything else on
             <a href="https://twitter.com/jadnco" title="jadnco on Twitter">Twitter</a>.
           </div>
@@ -56,34 +59,26 @@
           <a href="mailto:hello@jaden.io" title="Email hello@jaden.io">
             hello@jaden.io
           </a>
-
-          <div id="shadow" class="shadow"></div>
-        </div>
+        </span>
       </div>
     </div>
 
     <script type="text/javascript">
 
-      // Colors via http://randoma11y.com
-      var colors = [
-        ['#fcd17c', '#231a6a'],
-        ['#93acd9', '#141e6b'],
-        ['#4a57e3', '#a6fe83'],
-        ['#344ba2', '#52ffba'],
-        ['#188178', '#f4fdf5'],
-        ['#3f7076', '#daf87e'],
-        ['#d46561', '#031852'],
-        ['#728794', '#1c0d3a'],
+      var memoji = [
+        '/images/memoji/0.png',
+        '/images/memoji/1.png',
+        '/images/memoji/2.png',
+        '/images/memoji/3.png',
+        '/images/memoji/4.png'
       ];
 
-      var set = colors[Math.floor(Math.random() * colors.length)];
-      var variant = Math.round(Math.random());
+      var variant = memoji[Math.floor(Math.random() * memoji.length)];
+      var memojiElement = document.getElementById('memoji');
 
-      var about = document.getElementById('about');
-      var shadow = document.getElementById('shadow');
+      memojiElement.style.backgroundImage = 'url("' + variant + '")';
 
-      about.style.backgroundColor = set[variant | 0];
-      about.style.color = shadow.style.backgroundColor = set[!variant | 0];
+      console.log('🇨🇦👍')
     </script>
   </body>
 </html>
