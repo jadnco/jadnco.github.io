@@ -5,51 +5,43 @@
 
 :root {
   font-size: 18px;
-  line-height: 1.3;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 500;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  background-color: #fff;
+  font-family: monospace;
 }
 
 a {
   color: inherit;
 }
 
-strong {
-  font-weight: 700;
-}
-
 .container-fluid {
-  padding: 4rem 1.5rem;
+  padding: 1.5rem;
   max-width: 66rem;
 }
 
 .about-card {
   position: relative;
   padding: 1.5rem;
-  text-align: center;
+}
+
+.about-card .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: -1;
 }
 
 .about-card .name,
 .about-card .error {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .about-card .info {
-  padding: 1.2rem 0;
+  padding: 2rem 0;
 }
 
 .about-card .message {
   padding-bottom: 2rem;
-}
-
-.about-card .role {
-  color: #888;
 }
 
 .about-card .email {
@@ -57,26 +49,17 @@ strong {
   margin-top: 2rem;
 }
 
-#memoji {
-  width: 100%;
-  background-image: url("../images/memoji/1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 10rem;
-  min-height: 10rem;
-}
-
 @media only screen and (min-width: 48em) {
   .container-fluid {
-    padding: 6rem 4rem;
+    padding: 4rem;
   }
 
   .about-card {
     padding: 2rem;
-    text-align: left;
   }
 
-  #memoji {
-    background-size: 90%;
+  .about-card .shadow {
+    top: 1rem;
+    left: 1rem;
   }
 }
