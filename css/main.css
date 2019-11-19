@@ -13,6 +13,7 @@
 }
 
 body {
+  color: #000;
   background-color: #fff;
 }
 
@@ -79,5 +80,17 @@ strong {
 
   #memoji {
     background-size: 90%;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #ccc;
+    background-color: #1E2021;
+  }
+
+  .about-card .role,
+  .about-card .message {
+    color: #666;
   }
 }
