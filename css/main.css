@@ -42,7 +42,11 @@ strong {
 }
 
 .about-card .info {
-  padding: 1.2rem 0;
+  padding-top: 1.2rem;
+}
+
+.about-card .info:last-of-type {
+  padding-bottom: 1.2rem;
 }
 
 .about-card .message {
