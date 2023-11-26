@@ -12,6 +12,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   color: #fff;
   background-color: #6F58C9;
@@ -26,8 +32,11 @@ strong {
 }
 
 .container-fluid {
-  padding: 4rem 1.5rem;
+  display: flex;
+  height: 100%;
+  padding: 0 1.5rem;
   max-width: 66rem;
+  align-items: flex-start;
 }
 
 .about-card {
@@ -63,13 +72,23 @@ strong {
   margin-top: 2rem;
 }
 
+.rings {
+  width: 100%;
+  min-height: 20rem;
+  background: url(../images/sun.svg) no-repeat;
+  background-size: 50%;
+  background-position: center;
+  margin-bottom: 2rem;
+}
+
 @media only screen and (min-width: 48em) {
   :root {
     font-size: 18px;
   }
 
   .container-fluid {
-    padding: 6rem 4rem;
+    padding: 0 4rem;
+    align-items: center;
   }
 
   .about-card {
@@ -77,7 +96,7 @@ strong {
     text-align: left;
   }
 
-  #memoji {
-    background-size: 90%;
+  .rings {
+    margin-bottom: 0;
   }
 }
