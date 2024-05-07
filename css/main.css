@@ -20,7 +20,9 @@ body {
 
 body {
   color: #fff;
-  background-color: #6F58C9;
+  background: linear-gradient(300deg, #6F58C9, #7809FF) no-repeat center center fixed;
+  background-size: cover;
+  /*background-color: #6F58C9;*/
 }
 
 a {
